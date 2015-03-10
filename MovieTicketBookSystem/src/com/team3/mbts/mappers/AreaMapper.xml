@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">	
+<mapper namespace="com.team3.mbts.mappers.AreaMapper">
+	<resultMap type="com.team3.mbts.entity.Area" id="AreaResult">
+		<id property="areaId" column="AREA_ID" />
+		<result property="areaName" column="AREA_NAME"/>
+		<result property="parentId" column="PARENT_ID"/>
+	</resultMap>
+</mapper>

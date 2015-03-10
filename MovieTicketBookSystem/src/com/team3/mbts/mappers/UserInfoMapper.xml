@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">	
+<mapper namespace="com.team3.mbts.mappers.UserInfoMapper">
+	<resultMap type="com.team3.mbts.entity.UserInfo" id="UserInfoResult">
+		<id property="userId" column="USER_ID" />
+		<result property="account" column="ACCOUNT"/>
+		<result property="password" column="PASSWORD"/>
+		<result property="headPath" column="HEAD_PATH"/>
+		<result property="isAdmin" column="IS_ADMIN"/>
+		<result property="isExist" column="IS_EXIST"/>
+	</resultMap>
+	
+	<!-- 用于影评列表中的用户信息等 -->
+	<resultMap type="com.team3.mbts.entity.UserInfo" id="SimplifiedUserInfoResult">
+		<id property="userId" column="USER_ID" />
+		<result property="account" column="ACCOUNT"/>
+		<result property="headPath" column="HEAD_PATH"/>		
+	</resultMap>
+	
+	<!-- 按照编号或用户名对用户进行模糊匹配查询 -->
+	<select id="getUserSelec" resultMap="SimplifiedUserInfoResult">
+		<choose>
+			<when test="type == 0">	<!-- 按照用户编号进行模糊匹配 -->
+				select * from TB_USERINFO where IS_EXIST=1 and IS_ADMIN=0 and USER_ID like '%${account}%' order by USER_ID
+			</when>
+			<when test="type == 1"> <!-- 按照用户名进行模糊匹配 -->
+				select * from TB_USERINFO where IS_EXIST=1 and IS_ADMIN=0 and ACCOUNT like '%${account}%' order by USER_ID				
+			</when>			
+		</choose>
+	</select>
+</mapper>

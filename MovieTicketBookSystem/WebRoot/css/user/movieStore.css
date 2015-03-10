@@ -1,0 +1,515 @@
+@charset "utf-8";
+/* CSS Document */
+/* 整体样式  */
+ div, dl, dt, dd, ol, h1, h2, h3, h4, h5, h6, pre, form, fieldset, p, blockquote, th, td, ins, img {
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+}
+html {
+    background: none repeat scroll 0 0 #f2f2f2;
+    overflow-y: scroll;
+}
+body {
+    color: #333;
+    font: 12px/22px verdana,Arial,Helvetica,"宋体",sans-serif;
+    background-color: #FEE8DD;
+}
+
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}		
+.ulist {
+	font-size:14px;	
+}
+
+.ui_right {
+	width:1050px;
+	float:right;
+	margin-right:-98px;
+	margin-top:-30px;
+	background-color:#FFFFFF;
+	min-height: 1301px;	
+}
+.ui_right ul, .ui_right li {
+	margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+} 
+.ui_right img {
+    border: 0 none;
+}
+.ui_right img {
+    vertical-align: middle;
+}
+/* 主框架样式  */
+.mid{
+	margin:0px auto;
+	width: 1050px;
+	min-height: 1101px;			
+	margin-top: 60px;			
+}
+/* 左框架样式  */
+.left{
+	width: 690px;
+	min-height: 1000px;		
+	float: left;
+}
+/* 右框架样式  */
+.right{
+	width: 310px;
+	height: 1100px;
+	float: right;
+	padding-right:10px;
+}
+
+/* 正在热映样式  */
+.m14{
+	margin-top:20px;
+	width: 310px;
+	height: 40px;
+}
+.t{
+	float: left;
+}
+.m{
+	font-size:14px;
+	float: right;
+}
+.m a {
+	color:#aaa;
+}
+.m a:hover {
+	text-decoration:underline;
+}
+div.nowm {
+	font-size:13px;
+}
+.nowm li{
+	list-style: none;
+}
+
+.ui_media, .ui_text {
+ 	overflow: hidden;
+}
+.ui_media .ui_pic img, .ui_media .ui_picR img {
+    display: block;
+}
+.ui_media .ui_pic {
+    float: left;
+    margin-right: 10px;
+}
+.ui_media .ui_picR {
+    float: right;
+    margin-left: 10px;
+}
+.ui_media {
+    color: #666;
+    margin-top: 15px;
+}
+.ui_media em {
+	font-style: normal;
+}
+.fs14 {
+			font-size: 16px;
+			color: #EB6120;
+}
+.grade {
+    font: 14px/22px verdana,Arial,Helvetica,"宋体",sans-serif;
+    margin: 0 0 0 9px;
+    color: #EB6120;
+}
+.grade sub {
+    color: #ff6600;
+    font-size: 24px;
+    font-style: italic;
+    vertical-align: middle;
+}
+.grade sup {
+    color: #ff6600;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 20px;
+    margin-left: -4px;
+    vertical-align: 3px;
+}
+.mt5 {
+  		margin-top: 5px;
+  		color: #999999;
+  		font-size: 14px;
+}
+.c999 {
+    color: #999 !important;
+}
+
+ /* 电影库头部样式 */ 
+.mod_kong, .mod_tabs {
+	 	 margin-bottom: 30px;
+}
+.mod_kong .mod_hd {
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    z-index: 1;
+    margin-top:10px;
+}
+.mod_kong .mod_hd h2, .mod_line .mod_hd h2, .mod_tabs .mod_hd ul.nav_tabs li a, .mod_tabs ul.nav_tabs li a {
+    font-family: "微软雅黑","宋体";
+    font-size: 16px;
+    font-weight: bold;
+}
+.mod_hd h2{
+	padding-left: 15px;
+}
+.mod_kong .mod_hd .more {
+    color: #333 !important;
+    font-family: "宋体";
+}
+.more {
+    color: #333;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.jia {
+    font-family: "Tahoma";
+    font-size: 17px;
+    margin-right: 3px;
+    vertical-align: -2px;
+}
+.ui_userBoxBtn {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #fff;
+    border-color: -moz-use-text-color #ddd #ddd;
+    border-image: none;
+    border-right: 1px solid #ddd;
+    border-style: none solid solid;
+    border-width: 0 1px 1px;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    color: #333;
+    opacity: 0;
+    padding: 0 1px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+    width: 148px;
+    z-index: 200;
+}
+.ui_userBoxBtn a {
+    color: #333;
+}
+.ui_userBoxBtn .ulist a {
+    color: #333;
+    display: block;
+    float: left;
+    font: 14px/36px "微软雅黑","宋体";
+    height: 36px;
+    overflow: hidden;
+    padding: 0;
+    text-decoration: none !important;
+    text-indent: 8px;
+    width: 100%;
+}
+.ui_userBoxBtn .ulist a:hover {
+    background: none repeat scroll 0 0 #f5f5f5;
+    color: #c30;
+}
+.ulist {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 30px;
+    background: none repeat scroll 0 0 #fff;
+}
+.ulist li {
+    line-height: 24px;
+    padding: 3px 0 5px;
+    padding-left:20px;
+    list-style-type: none;
+}
+.ulist li a {
+    cursor: pointer;
+    white-space: nowrap;
+}
+.condition a {
+    color: #666666;
+    margin: 0 2px;
+    padding: 3px 4px;
+}
+.condition a.selected {
+    background-color: #dd3300;
+    color: #fff;
+}
+.condition a:hover {
+    background-color: #ec6120;
+    color: #fff;
+    text-decoration: none;
+}
+.clear:after, .button:after, .ui_layout:after, .abeam:after, .list li:after, .tales60:after, .tales100:after, .selectOptions:after, .inner:after, .nav_tabs:after {
+    clear: both;
+    content: "content";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+    width: 0;
+}
+.dlTy {
+    padding-left: 63px;
+    position: relative;
+}
+.typeTitle {
+    color: #999;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.mr10 {
+    margin-right: 10px;
+}
+.redBt {
+	text-decoration:none;
+	color:#fff;
+	height:20px;
+	padding: 6px 12px;
+	border-radius:3px;
+	background-color:#EB6120;
+}
+.redBt:hover {
+	background-color:#FE7600;
+}
+.search{
+	float: left;
+}
+.search input[type='text'] {
+	height:25px;
+	padding-left:10px;
+	font-size:14px;
+}
+.search input[type='button'] {
+	height:30px;
+	padding-left:10px;
+	font-size:14px;
+	border:none;
+	cursor:pointer;
+	color:#fff;
+}
+.selections {
+    background: none repeat scroll 0 0 #dd3300;
+    color: #fff;
+    display: inline-block;
+    height: 22px;
+    line-height: 22px;
+    margin-right: 10px;
+    padding: 0 15px 0 5px;
+    position: relative;
+}
+.selections em {
+	font-style: normal;
+}
+.selections a {
+	margin-left:3px;
+	color: #fff;
+}
+.selections a:hover {
+	background-color: #fff;
+	color:#dd3300;
+	cursor: pointer;
+}
+
+.selectedMenus {
+    background: none repeat scroll 0 0 #f4f4f4;
+    height: 28px;
+    line-height: 28px;
+    padding: 5px;
+    margin-left:20px;
+    position: relative;
+    z-index: 2;
+}
+.selectedMenus select {
+    vertical-align: middle;
+    height:25px;
+}
+.selectedMenus select option {
+	height: 25px;
+	padding-top:4px;	
+}
+.right1{
+	float: right;
+}
+.ui_simulate {
+    position: relative;
+    width: 152px;
+}
+.ui_simulate .simulate_select {
+    background: -moz-linear-gradient(center top , #fcfbfb, #f2f0f1) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid #c3c3c3;
+    border-radius: 2px;
+    cursor: pointer;
+    height: 26px;
+    line-height: 26px;
+    overflow: hidden;
+    padding: 0 30px 0 8px;
+    position: relative;
+}
+.ui_simulate .simulate_select .select_arrow {
+    background: url("/css/global/selectBar_arrow.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    border-left: 1px solid #c3c3c3;
+    height: 27px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 22px;
+}
+.ui_simulate .simulate_options {
+    background-color: #fff;
+    border: 1px solid #c3c3c3;
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 27px;
+    width: 150px;
+    z-index: 100;
+}
+.ui_simulate .simulate_options li {
+    color: #333;
+    display: block;
+    height: 26px;
+    line-height: 26px;
+    margin: 2px 3px;
+    overflow: hidden;
+    width: 144px;
+}
+.ui_simulate .simulate_options li a {
+    color: #333;
+    display: block;
+    padding: 0 5px;
+}
+.ui_simulate .simulate_options li a:hover {
+    background-color: #f2f2f2;
+    color: #c30;
+}
+.colorRed {
+    color: #cc3300;
+}
+.sNum {
+    margin: 0 2px;
+}
+.left1{
+	float: left;
+}
+.fs15 {
+    font-size: 14px;
+}
+.selections {
+    background: none repeat scroll 0 0 #dd3300;
+    color: #fff;
+    display: inline-block;
+    height: 22px;
+    line-height: 22px;
+    margin-right: 10px;
+    padding: 0 25px 0 5px;
+    position: relative;
+}
+.selections1 {
+    padding: 0 5px;
+}
+.tiaojian_p{
+	padding-left: 2px;
+}
+
+/* 影片列表   */
+.movieList {
+    padding-top: 15px;
+}
+.movieList a {
+    color: #333;
+}
+.movieList .title h2, .movieList .title h3 {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 26px;
+    overflow: hidden;
+}
+.movieList .title h2 {
+    font: 24px/26px verdana,Arial,"微软雅黑","宋体";
+}
+.movieList ul li.effectLi {
+    border-bottom: 1px solid #f4f4f4;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-left:20px;
+    padding: 0 0 20px;
+    position: relative;
+    z-index: 1;
+}
+.effectLi .ui_media .ui_pic {
+    margin-right: 20px;
+}
+.ml5 {
+    margin-left: 5px;
+}	
+.grade {
+    font: 12px/22px verdana,Arial,Helvetica,"宋体",sans-serif;
+    margin: 0 0 0 9px;
+}
+.grade sub {
+    color: #ff6600;
+    font-size: 24px;
+    font-style: italic;
+    vertical-align: middle;
+}
+.grade sup {
+    color: #ff6600;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 20px;
+    margin-left: -4px;
+    vertical-align: 3px;
+}
+.buyButton {
+    background: none repeat scroll 0 0 #eb6120;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+.ui_pic {
+    text-align: center;
+}
+.effectLi .ui_text {
+    color: #999;
+}
+.color3 {
+    color: #333333;
+}
+
+.mt10 {
+    margin-top: 10px;
+}	
+ .title {
+    height: 44px;
+    line-height: 44px;
+    margin-bottom: 10px;
+}
+.tl{
+	float: left;
+}
+.tr{
+	float: left;
+}
+.tl h2 a{
+    height: 44px;
+    line-height: 44px;
+}
+.ajaxRoomInfo p {
+    margin-top: 10px;
+}
+.ajaxRoomInfo p em {
+    color: #999;
+}

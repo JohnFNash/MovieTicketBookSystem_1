@@ -1,0 +1,228 @@
+@CHARSET "UTF-8";
+/* 整体框架css  */
+.all{
+	width:90%;
+	height: 1600px;
+	/* border: 1px solid orange;   */
+}
+/* 标题css  */
+.title{
+	width: 100%;
+	height: 100px;
+	/*  border: 1px solid pink;   */
+}
+.title .t1{
+	width:100%;
+	height: 55px;
+	float: left;
+	text-align:center;
+	/*  border: 1px solid red;  */
+}
+.title .m10{
+	width:100%;
+	height: 42px;
+	margin-top:40px;
+	border-bottom:2px solid #EB6120;
+	float: left;
+	
+}
+.title .m10 .m11{
+	width: 120px;
+	height: 42px;
+	float: left;
+	background-color:#EB6120;
+	color:white;
+	font-family: "微软雅黑","宋体";
+    font-size: 16px;
+    font-weight: bold;
+}
+.title .m10 .m11 span{
+	position: relative;
+	top: 10px;
+	left: 27px;
+}
+/* 影片类型css  */
+.mod_bd{
+	width: 100%;
+	float: left;
+	/* border: 1px solid blue ;  */
+}
+.typeTitle {
+    color: #414141;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.dlTy {
+    padding-left: 63px;
+    position: relative;
+}
+.condition {
+	margin-top: 20px;
+}
+.condition dd a{
+color:#999999;
+}
+.condition a.selected {
+    background-color: #dd3300;
+    color: #fff;
+}
+.condition a:hover {
+    background-color: #dd3300;
+    color: #fff;
+    text-decoration: none;
+}
+.search_kuang {
+	
+    display: inline;
+    height: 29px;
+    margin: 2px 0 0 7px;
+}
+.ulist {
+    margin-top: 0px;
+   /*  border: 1px solid green  ; */
+}
+.ulist li {
+	list-style-type:none;
+    line-height: 10px;
+    padding: 3px 0 5px;
+}
+.ulist li a {
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+}
+.noradius {
+    border-radius: 0;
+}
+.search_kuang{
+	/* border: 1px solid pink; */
+	margin-top: -6px;
+}
+.search_kuang .searchText {
+    background: none repeat scroll 0 0 #C5A096;
+    width: 250px;
+}
+.search_kuangClicked input.searchText {
+    background: none repeat scroll 0 0 #C5A096;
+    color: #656668;
+}
+.noradius input {
+    background-color: #f5f5f5;
+    background-position: 5px -65px;
+}
+.search_kuangClicked .noradius input {
+    background-color: #ffe6cd;
+    background-position: 5px -101px;
+}
+.mr10 {
+    margin-right: 10px;
+}
+.left{
+	float: left;
+}
+.clear:after, .button:after, .ui_layout:after, .abeam:after, .list li:after, .tales60:after, .tales100:after, .selectOptions:after, .inner:after, .nav_tabs:after {
+    clear: both;
+    content: "content";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+    width: 0;
+}
+.movie_types { width:680px; height:133px;}
+.movie_types span {color:#aaa; font-size:15px;}
+.movie_types input[type='text'], .movie_types select {margin-left:20px; width:190px; height:25px; padding-left:10px;}
+.movie_types input[type='button'] {width:60px; font-size:14px; border-radious:3px; border:none; cursor:pointer;}
+.movie_types select {max-width:204px;}
+.movie_types select option {max-width:175px; height:22px; padding-left:15px; padding-top:3px;}
+.movie_types div.queryDiv {
+	margin-left: -2px;
+	clear: both;
+	position: relative;
+	top:10px;
+}
+.movie_types .typeHref {
+	float:right;
+	margin-right:61px;
+	margin-top:-20px;
+	width:510px;
+}
+.movie_types .movie_dz a {
+	line-height: 30px;	
+}
+
+
+
+/* 分页css 之后导入标签  */
+.pageGroup{
+	width: 90%;
+	height: 45px;
+	float: left;
+	margin-left: 40px;
+	/* border: 1px solid orange; */
+}
+.pageGroup .page table{
+	border: 
+}
+.pageGroup .page table tr td{
+	background-color: #33CCFF;
+	font-size:16px;
+	color: white;
+}
+/* 影片列表css  */
+.movieList{
+	width: 90%;
+	float: left;
+	margin-left: 20px;
+	margin-top:0px;
+	/* border: 1px solid orange;  */
+}
+.mlist li{
+	list-style-type: none;
+	margin-top: 15px;
+	/* border:1px solid red; */
+	padding-bottom:20px;
+	border-bottom:1 px solid #000000;
+}
+.mlist li td a{
+text-decoration:none;
+}
+.mlist table tr{
+	height: 25px;
+}
+.but_add{
+	background-color:#CCCCCC;
+	border:none;
+    border-radius: 5px;
+    color: white;
+    float: left;
+    font: 16px/30px "微软雅黑","宋体";
+    margin-top: 5px;
+    text-align: center;
+    width: 80px;}
+	.redBt {
+	text-decoration:none;
+	color:#fff;
+	height:37px;
+	width:45px;
+	padding: 6px 12px;
+	border-radius:3px;
+	background-color:#EB6120;
+	cursor:pointer;
+}
+.redBt:hover {
+	background-color:#FE7600;
+}
+.movie_dz a {
+	color: #000;
+	text-decoration: none;
+	padding:5px;
+}
+.movie_dz a.selected{
+	color: #FFffff; background-color:#EC6120;
+}
+ .movie_dz a:hover {
+	text-decoration: none;
+	color: #FFffff; background-color:#EC6120;
+} 

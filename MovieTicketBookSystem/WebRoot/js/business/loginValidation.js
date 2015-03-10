@@ -1,0 +1,30 @@
+//登录表单验证
+$().ready(function(){		
+	//要验证的表单
+	$("#loginForm").validate({
+		//验证的规则
+		rules:{
+			//用户名字段非空，为邮箱
+			username:{
+				required:true,
+				email:true
+			},
+			//密码字段：非空，长度不能小于5个字符
+			password:{
+				required:true,
+				minlength:5
+			}
+		},
+		//验证提示的信息
+		messages:{
+			username:{
+				required:"请输入用户名",
+				email:"请输入邮箱"
+			},
+			password:{
+				required:"请输入密码",
+				minlength:$.validator.format("密码不能小于{0}个字符")
+			}
+		}			
+	});
+});

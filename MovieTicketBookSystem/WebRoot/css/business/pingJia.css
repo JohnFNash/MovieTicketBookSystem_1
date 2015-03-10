@@ -1,0 +1,63 @@
+@CHARSET "UTF-8";
+
+/*页面背景*/
+body{
+background-color:#EFEFEF;
+}
+
+/*页面底层*/
+.box{
+background-color:#EFEFEF;
+width:900px;
+height:1400px;
+margin:auto;
+padding-top:30px;
+}
+
+/*标题层*/
+.title{
+	font-weight:bold;
+	font-size:26px;
+	text-align:center;
+	width:900px;
+	height:45px;
+}
+
+/*�����ܲ�*/
+.main{
+width:100%;
+}
+
+/*���۲�*/
+.word{
+width:800px;;
+height:180px;
+border-bottom:1px dashed #000000;
+margin:0px auto;
+}
+/*ͷ���*/
+.pic{
+margin-top:50px;
+float:left;
+}
+.pic img {
+border-radius:25px;
+}
+/*�������ݲ�*/
+.text{
+float:left;
+}
+.text p a{
+float:right;}
+
+/*������۰�ť��*/
+.more{
+width:800px;
+height:25px;
+background-color:#ccc;
+font:Arial, Helvetica, sans-serif;
+font-size:20px;
+color:#FFFFFF;
+margin:0px auto;
+margin-top:20px;
+}

@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name></display-name>
+  <servlet>
+    <servlet-name>CreateCodeServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.common.CreateCodeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>loginServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.cinema.loginServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>UserLoginServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.user.UserLoginServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>AdminLoginServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.user.AdminLoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdatePwdServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.user.UpdatePwdServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UserLogoutServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.user.UserLogoutServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminLogoutServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.user.AdminLogoutServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UserRegisterServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.user.UserRegisterServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+
+    <servlet-name>LoadHotestMovieServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.movie.LoadHotestMovieServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+
+    <servlet-name>ShwoUserServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.user.ShwoUserServlet</servlet-class>
+  </servlet>
+
+<servlet>
+    <servlet-name>MovieServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.movie.MovieServlet</servlet-class>
+ </servlet>
+  <servlet>
+
+    <servlet-name>AddMovieServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.movie.AddMovieServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>ShwoSellerServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.user.ShwoSellerServlet</servlet-class>
+  </servlet>	
+
+  <servlet>
+    <servlet-name>VideoHallServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.cinema.VideoHallServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>IndexServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.other.IndexServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>DeletUserServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.user.DeletUserServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>DeletSellerServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.user.DeletSellerServlet</servlet-class>
+  </servlet>
+
+
+  <servlet>
+    <servlet-name>ScreeningServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.cinema.ScreeningServlet</servlet-class>
+  </servlet>
+
+
+
+  <servlet>
+    <servlet-name>ShwoCinemaServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.user.ShwoCinemaServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>CinemaRemarkServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.cinema.CinemaRemarkServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>HotMovieServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.movie.HotMovieServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FutureMovieServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.movie.FutureMovieServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GetMovieServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.movie.GetMovieServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BusinessInformationServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.cinema.BusinessInformationServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>MovieStoreServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.movie.MovieStoreServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeletCinemaServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.user.DeletCinemaServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeletCinemaRemarServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.user.DeletCinemaRemarServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>StatisticsServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.cinema.StatisticsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoadCinemasServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.cinema.LoadCinemasServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetCinemaServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.cinema.GetCinemaServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>WriteCinemaRemarkServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.cinema.WriteCinemaRemarkServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>WriteMovieRemarkServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.movie.WriteMovieRemarkServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BeforeSelectSeatServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.cinema.BeforeSelectSeatServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SelectSeatServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.cinema.SelectSeatServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoadAllMoviesServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.movie.LoadAllMoviesServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetMovieRemarkServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.movie.GetMovieRemarkServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>MovieUpdateServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.movie.MovieUpdateServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminGetMovieServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.movie.AdminGetMovieServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowUserOrderServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.order.ShowUserOrderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowUserMovieRemarkServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.user.ShowUserMovieRemarkServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowUserCinemaRemarkServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.user.ShowUserCinemaRemarkServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowOrderSeatServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.order.ShowOrderSeatServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CinemaRemarkCirticServlet</servlet-name>
+    <servlet-class>com.team3.mbts.servlet.cinema.CinemaRemarkCirticServlet</servlet-class>
+  </servlet>
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>CreateCodeServlet</servlet-name>
+    <url-pattern>/business/CreateCodeServlet</url-pattern>
+     <url-pattern>/admin/CreateCodeServlet</url-pattern>
+     <url-pattern>/user/CreateCodeServlet</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet-mapping>
+    <servlet-name>loginServlet</servlet-name>
+    <url-pattern>/business/loginServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>MovieServlet</servlet-name>
+    <url-pattern>/business/MovieServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>UserLoginServlet</servlet-name>
+    <url-pattern>/user/UserLoginServlet</url-pattern>
+  </servlet-mapping>	
+  
+  <servlet-mapping>
+    <servlet-name>AdminLoginServlet</servlet-name>
+    <url-pattern>/admin/AdminLoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdatePwdServlet</servlet-name>
+    <url-pattern>/admin/UpdatePwdServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserLogoutServlet</servlet-name>
+    <url-pattern>/user/UserLogoutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserRegisterServlet</servlet-name>
+    <url-pattern>/user/UserRegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadHotestMovieServlet</servlet-name>
+    <url-pattern>/user/LoadHotestMovieServlet</url-pattern>
+
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminLogoutServlet</servlet-name>
+    <url-pattern>/admin/AdminLogoutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+
+    <servlet-name>ShwoUserServlet</servlet-name>
+    <url-pattern>/admin/ShwoUserServlet</url-pattern>
+
+  </servlet-mapping>
+  <servlet-mapping>
+
+    <servlet-name>ShwoSellerServlet</servlet-name>
+    <url-pattern>/admin/ShwoSellerServlet</url-pattern>
+
+  </servlet-mapping>
+  <servlet-mapping>
+
+    <servlet-name>AddMovieServlet</servlet-name>
+    <url-pattern>/movie/AddMovieServlet</url-pattern>
+	<url-pattern>/admin/AddMovieServlet</url-pattern>	
+
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeletUserServlet</servlet-name>
+    <url-pattern>/admin/DeletUserServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>DeletSellerServlet</servlet-name>
+    <url-pattern>/admin/DeletSellerServlet</url-pattern>
+
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>IndexServlet</servlet-name>
+    <url-pattern>/user/IndexServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShwoCinemaServlet</servlet-name>
+    <url-pattern>/admin/ShwoCinemaServlet</url-pattern>
+
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>VideoHallServlet</servlet-name>
+    <url-pattern>/business/VideoHallServlet</url-pattern>
+
+
+
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>ScreeningServlet</servlet-name>
+    <url-pattern>/business/ScreeningServlet</url-pattern>
+
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CinemaRemarkServlet</servlet-name>
+    <url-pattern>/admin/CinemaRemarkServlet</url-pattern>
+
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>HotMovieServlet</servlet-name>
+    <url-pattern>/user/HotMovieServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FutureMovieServlet</servlet-name>
+    <url-pattern>/user/FutureMovieServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetMovieServlet</servlet-name>
+    <url-pattern>/user/GetMovieServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BusinessInformationServlet</servlet-name>
+    <url-pattern>/business/BusinessInformationServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MovieStoreServlet</servlet-name>
+    <url-pattern>/user/MovieStoreServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeletCinemaServlet</servlet-name>
+    <url-pattern>/admin/DeletCinemaServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeletCinemaRemarServlet</servlet-name>
+    <url-pattern>/admin/DeletCinemaRemarServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StatisticsServlet</servlet-name>
+    <url-pattern>/business/StatisticsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadCinemasServlet</servlet-name>
+    <url-pattern>/user/LoadCinemasServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetCinemaServlet</servlet-name>
+    <url-pattern>/user/GetCinemaServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>WriteCinemaRemarkServlet</servlet-name>
+    <url-pattern>/user/WriteCinemaRemarkServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>WriteMovieRemarkServlet</servlet-name>
+    <url-pattern>/user/WriteMovieRemarkServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BeforeSelectSeatServlet</servlet-name>
+    <url-pattern>/user/BeforeSelectSeatServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectSeatServlet</servlet-name>
+    <url-pattern>/user/SelectSeatServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadAllMoviesServlet</servlet-name>
+    <url-pattern>/admin/LoadAllMoviesServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetMovieRemarkServlet</servlet-name>
+    <url-pattern>/user/GetMovieRemarkServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MovieUpdateServlet</servlet-name>
+    <url-pattern>/admin/MovieUpdateServlet</url-pattern>
+  </servlet-mapping>  
+  <servlet-mapping>
+    <servlet-name>AdminGetMovieServlet</servlet-name>
+    <url-pattern>/admin/AdminGetMovieServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowUserOrderServlet</servlet-name>
+    <url-pattern>/user/ShowUserOrderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowUserMovieRemarkServlet</servlet-name>
+    <url-pattern>/user/ShowUserMovieRemarkServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowUserCinemaRemarkServlet</servlet-name>
+    <url-pattern>/user/ShowUserCinemaRemarkServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowOrderSeatServlet</servlet-name>
+    <url-pattern>/user/ShowOrderSeatServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CinemaRemarkCirticServlet</servlet-name>
+    <url-pattern>/admin/CinemaRemarkCirticServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  <!-- 过滤器的定义 -->
+  <filter>
+  	<filter-name>EncodingFilter</filter-name>
+  	<filter-class>com.team3.mbts.filter.EncodingFilter</filter-class>
+  </filter> 
+  <filter>
+  	<filter-name>AdminAccessFilter</filter-name>
+  	<filter-class>com.team3.mbts.filter.AdminAccessFilter</filter-class>
+  </filter> 
+  <filter>
+  	<filter-name>SellerAccessFilter</filter-name>
+  	<filter-class>com.team3.mbts.filter.SellerAccessFilter</filter-class>
+  </filter>
+  
+  <!-- 过滤器的路径映射 -->
+  <filter-mapping>
+  	<filter-name>EncodingFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+  	<filter-name>SellerAccessFilter</filter-name>
+  	<url-pattern>/business/*</url-pattern>  	
+  </filter-mapping>
+  <filter-mapping>
+  	<filter-name>AdminAccessFilter</filter-name>
+  	<url-pattern>/admin/*</url-pattern>  	
+  </filter-mapping>
+  
+  <welcome-file-list>
+  	<welcome-file>user/IndexServlet</welcome-file>      
+  </welcome-file-list>
+ 
+</web-app>

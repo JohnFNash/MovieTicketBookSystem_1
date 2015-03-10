@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>注册</title>
+	
+	<link rel="stylesheet" type="text/css" href="../css/user/register.css"/>
+	
+	<script type="text/javascript" src="../js/user/jquery-1.11.1.js"></script>
+	
+	<script type="text/javascript" src="../js/user/register.js"></script>
+</head>
+
+<body>
+	<div class="nav">
+		<img src="../images/other/e.PNG" width="1026" height="65" />
+	</div>
+	
+	<div class="form">
+		<table>	
+			<tr>
+				<td width="153" height="54"><span class="STYLE2">请输入用户名:</span></td>
+				<td><input type="text" name="username" maxlength="20"  style="height:24px; width:230px;" /></td>
+			</tr>	
+			<tr>
+				<td height="48"><span class="STYLE2">请输入密码:</span></td>
+				<td><input type="password" name="password" maxlength="16" style="height:24px; width:230px;" /></td>
+			</tr>
+			<tr>
+				<td height="47"><span class="STYLE2">确认输入密码:</span></td>
+				<td><input type="password" name="pwdAgain" maxlength="16" style="height:24px; width:230px;" /></td>
+			</tr>	
+			<tr>
+				<td height="47"><span class="STYLE2">请输入验证码:</span></td>
+				<td ><input type="text" name="validateCode" maxlength="4" style="width:79px;height:25px;">
+				  <img id="image" src="../user/CreateCodeServlet" onclick="refresh()" width="65px" height="23px" style="cursor:pointer; position:relative; top:3px;" alt="验证码" />
+				  &nbsp;&nbsp;<span class="STYLE3" onclick="refresh()" style="cursor: pointer;">换一张</span></td>
+			</tr>
+			<!-- <tr>
+				<td height="47" colspan="2">
+				  <span class="STYLE2">
+				  <input type="checkbox" checked="checked">	
+				  <span style="font-size:14px; color:#aaa">我接受服务协议表明您已经阅读并同意接受格瓦拉的服务协议</span></span>
+				</td>				
+			</tr> -->
+			<tr>
+				<td height="69" colspan="2" ><input type="button" value="注&nbsp;册"/></td>
+			</tr>			
+		  </table>
+	</div>
+				
+	<div class="footer">
+		<img src="../images/other/g.PNG" width="1027" height="60" />
+	</div>
+</body>
+</html>

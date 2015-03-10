@@ -1,0 +1,67 @@
+@CHARSET "UTF-8";
+
+
+/*座位分布层*/
+.seatList{
+	text-align:center;
+	min-height:300px;
+	border:1px solid #ccc;
+}
+.seatList  dl {
+	width:850px;
+}
+.seatList  dd {
+	padding:1px;
+	margin:1px;
+	display:inline;
+	width:22px;
+	cursor:pointer;
+}
+
+/*背景为可选座位*/
+.un{
+	height:18px;
+	width:22px;
+	background: url(../../images/other/ico_seat.gif)  no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	display:inline-block;
+}
+
+/*背景为不可选座位*/
+.on{
+	height:18px;
+	width:22px;
+	background: url(../../images/other/ico_seat.gif) no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background-position:0px -58px;
+	display:inline-block;
+}
+
+/*座位图片说明内层*/
+.seatInfo{		
+	height:40px;
+	margin:30px 10px;
+	margin-top:30px;
+	text-align:center;
+}
+
+/*座位图片说明内层中的每一个span元素*/
+.seatInfo span {
+	margin-left:30px;
+	margin-right:30px;
+}
+
+input[type="button"], input[type="submit"] {
+	width:100px;
+	height:30px;
+	margin-left:10px;
+	border:0;
+	background-color: #f60;
+	color:#fff;
+	font-size:14px;
+	border-radius:4px;
+	cursor:pointer;
+}	
+.footer {
+	width:100%;
+	text-align:center;
+	margin-top:20px;
+}		

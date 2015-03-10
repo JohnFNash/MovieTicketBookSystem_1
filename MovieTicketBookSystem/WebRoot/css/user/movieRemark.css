@@ -1,0 +1,31 @@
+@CHARSET "UTF-8";
+body {
+	width:100%;
+	background-color: #FEE8DD;
+}
+.mod_hd {
+	width:1190px;
+	margin:0 auto;
+	padding:15px;
+	background-color: #F4F4F4;
+}
+.content {
+	min-height: 530px;
+}
+.mod_hd h2, .mod_hd h3 {
+	width:1000px;
+}
+.mod_hd h3 {	
+	font-size:16px;
+}
+.mod_hd span.remark {
+	color:#bbb;	
+}
+
+.mod_bd {
+	width:1190px;
+	margin:0 auto;
+	padding:15px;
+	background-color: #FFFFFF;
+	min-height: 540px;
+}

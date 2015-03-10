@@ -1,0 +1,58 @@
+@CHARSET "UTF-8";
+body {
+	background-color:#FEE8DD;
+}
+/*主界面层*/
+.fixed_content {
+	width:1190px;
+	margin:0 auto;	
+}
+/*左层*/
+.ui_left {
+	width:150px;
+	height:350px;
+	position:fixed;
+	top:80px;
+	background-color:skyblue;
+	float:left;
+	text-align:center;
+}
+.ui_left p {
+	margin-top:30px;
+}
+.ui_left p a {
+	text-decoration:none;
+	padding:10px;
+	border:1px dashed red;
+	border-radius:20px;	
+	color:#FFFFFF;
+}
+
+
+/*左层的用户头像层*/
+.ui_left .userInfo .pic img {
+    border-radius: 30px;
+    background-image:url('../../images/head/h004.jpg');
+}
+/*头像层下面的文字层*/
+.ui_oneLine {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display:block;
+    text-decoration: none;
+}
+
+/*右层*/
+.ui_right {
+	width:1030px;
+	float:right;
+	margin-top:30px;
+	background-color:#FFFFFF;
+}
+
+.contentFrame{
+	width:1024px;
+	height:640px;
+	border:none;
+}

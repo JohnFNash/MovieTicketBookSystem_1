@@ -1,0 +1,178 @@
+@CHARSET "UTF-8";
+
+/*页面背景*/
+body{
+background-color:#EFEFEF;
+}
+
+/*页面底层*/
+.box{
+background-color:#EFEFEF;
+width:900px;
+height:1000px;
+margin:auto;
+padding-top:30px;
+}
+
+/*标题层*/
+.title{
+	font-weight:bold;
+	font-size:26px;
+	text-align:center;
+	width:900px;
+	height:45px;
+}
+
+/*影院列表索引层*/
+.index{
+	width:900px;
+	height:40px;
+	background-color: #eb6120;
+}
+/*下拉列表层*/
+.index_left{
+	float: left;
+	margin-left: 20px;
+}
+/*下拉列表*/
+.index_left select{
+	width: 190px;
+	height: 30px;
+}
+/*收索层*/
+.index_right{
+	float: right;
+	margin-right: 20px;
+}
+/*收索文本框*/
+.index_right input{
+	border:none;
+	width: 120px;
+	height: 28px;
+	margin-top: 5px;
+}
+/*影院列表索引层里面的文字*/
+.index span{
+	font-size: 20px;
+	font-family: "微软雅黑";
+	color: #FFFFFF;
+	position: relative;
+	top:4px;
+}
+
+/*主体层*/
+.main{
+width:100%;
+min-height:500px;
+margin-top: 20px;
+}
+
+/*影院层*/
+.cinema{
+width:800px;;
+height:200px;
+background-color:#CCCCCC;
+margin:0px auto;
+border-radius:20px;
+}
+/*影院图像层*/
+.cinema_pic{
+margin-top:0px;
+float:left;
+}
+/*影院图片*/
+.cinema_pic img {
+border-radius:20px;
+}
+
+/*影院信息显示层*/
+.cinema_text{
+padding-top: 20px;
+padding-left: 320px;
+}
+.cinema_text b{
+font-size:28px;
+font-family: "楷体";
+color: yellow;
+}
+sub{
+	font-size:30px;
+	font-weight: bold;
+	color: #eb6120;
+}
+sup{
+	font-size:20px;
+	color: #eb6120;
+}
+/*收索影院层*/
+.fand{
+	margin-top: 10px;
+}
+
+/*用户层*/
+.user{
+	width:800px;;
+	height:180px;
+	border-bottom:1px dashed #000000;
+	margin:0px auto;
+	position: relative;
+	top:0px;
+}
+/*用户头像层*/
+.user_pic{
+	width:100px;
+	height:80px;
+	margin-top:50px;
+	position: absolute;
+	left:0px;
+}
+/*用户头像图片*/
+.user_pic img {
+border-radius:25px;
+}
+
+/*用户信息显示层*/
+.user_text{
+	width: 690px;
+	height: 180px;
+	position: absolute;
+	right:0px;
+	top:0px;
+}
+/*发表时间*/
+.pulish{
+float: left;
+}
+/* 评论审核 */
+.critic {
+	float:left;
+	margin-left: 200px;	
+}
+.critic span {
+	width:60px;
+	cursor: pointer;
+	padding: 3px 10px;
+	background-color: #aaa;
+	border-radius:5px;	
+	color: #fff;
+}
+.critic span:hover {
+	background-color: #ccc;
+}
+/*删除链接*/
+.user_text p a{
+float: right;
+margin-right: 0px;
+}
+
+/*更多评论按钮层*/
+.more{
+width:800px;
+height:25px;
+background-color:#ccc;
+font:Arial, Helvetica, sans-serif;
+font-size:20px;
+color:#FFFFFF;
+margin:0px auto;
+margin-top:20px;
+}

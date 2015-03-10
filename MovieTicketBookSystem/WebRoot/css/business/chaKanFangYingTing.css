@@ -1,0 +1,51 @@
+@CHARSET "UTF-8";
+/*网页背景*/
+body{
+	background-color:#FFFFFF;
+}
+
+/*添加放映厅链接层*/
+.top{
+	width:440px;
+	height:80px;
+	margin:0px auto;
+	margin-top:20px;
+	margin-bottom: 20px;
+}
+
+/*添加放映厅链接*/
+.a{
+	text-decoration: none;
+}
+
+/*标题*/
+h2{
+	text-align: center;
+	font-family: 黑体;
+}
+/*表格*/
+.table{
+	margin:0px auto;
+}
+
+/*表格中每一行*/
+.table tr{
+	margin-bottom: 10px;
+}
+
+/*表格中每一格*/
+.table td{
+	width:200px;
+	height:30px;
+	background-color:#CCCCCC;
+	color:#FFFFFF;
+	font-family:楷体;
+	font-size:20px;
+	padding:10px;
+	text-align:center;
+}
+
+/*表格中每一格的a标签*/
+.table td a{
+	text-decoration: none;
+}

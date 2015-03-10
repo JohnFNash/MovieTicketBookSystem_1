@@ -1,0 +1,138 @@
+@CHARSET "UTF-8";
+/* 整体框架css  */
+.content{
+	width: 99%;
+	height: 1477px;
+	background-color:white;
+	/*  border: 1px solid orange;  */
+}
+/* 标题css  */
+.title{
+	width: 100%;
+	height: 100px;
+	 /* border: 1px solid pink;  */
+}
+.title .t1{
+	width:100%;
+	height: 55px;
+	float: left;
+	margin-top:30px;
+	text-align:center;
+	/* border: 1px solid red; */
+}
+.title .m10{
+	width:100%;
+	height: 42px;
+	margin-top:40px;
+	border-bottom:2px solid #EB6120;
+	float: left;
+	
+}
+.title .m10 .m11{
+	width: 120px;
+	height: 42px;
+	float: left;
+	background-color:#EB6120;
+	color:white;
+	font-family: "微软雅黑","宋体" ;
+    font-size: 16px;
+    font-weight: bold;
+}
+.title .m10 .m11 span{
+	position: relative;
+	top: 10px;
+	left: 27px;
+}
+/* 选择下拉列表css  */
+.container{
+	float:left;
+	width:300px;
+	height:180px;
+	/* border: 1px solid pink; */
+}
+.container .wrapper-demo span{
+	font-family: "微软雅黑","宋体";
+    font-size: 16px;
+    font-weight: bold;
+}
+.container .wrapper-dropdown-3{
+	float:left;
+	margin-left:70px;
+	/* border: 1px solid pink; */
+}
+
+.price{
+	float: left;
+	width: 100%;
+	height:60px;
+	margin-top: 20px;
+}
+.price span{
+	font-family: "微软雅黑","宋体";
+    font-size: 16px;
+    font-weight: bold;
+}
+.price .ori{
+	
+	float: left;
+	height:40px;
+	margin-left: 40px;
+}
+.price .cur{
+	float: left;
+	height:40px;
+	margin-left: 20px;
+}
+
+/* 按钮css  */
+.bu{
+	width:40%;
+	float: left;
+	margin-top: 50px;
+	margin-left:300;
+	/* border: 1px solid blue; */
+}
+.bu .blue {  
+    color: #d9eef7;  
+    border: solid 1px #EB6120;  
+    background: #0095cd;  
+    background: -webkit-gradient(linear, left top, left bottom, from(#EB6120), to(#EB6120));  
+    background: -moz-linear-gradient(top,  #EB6120,  #EB6120);  
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#EB6120', endColorstr='#EB6120');  
+} 
+.bu .button {  
+    display: inline-block;  
+    zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */  
+    *display: inline;  
+    vertical-align: baseline;  
+    margin: 0 10px;  
+    outline: none;  
+    cursor: pointer;  
+    text-align: center;  
+    text-decoration: none;
+    font-family: "微软雅黑","宋体";  
+    font: 16px/100% Arial, Helvetica, sans-serif;  
+    padding: .5em 2em .55em;  
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);  
+    -webkit-border-radius: .5em;   
+    -moz-border-radius: .5em;  
+    border-radius: .5em;  
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);  
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);  
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);  
+}  
+.button:hover {  
+    text-decoration: none;  
+}  
+.button:active {  
+    position: relative;  
+    top: 1px;  
+}  
+
+.bu a {  
+	    color: #339;  
+	    text-decoration: none;  
+	}  
+.bu a:hover {  
+    /* text-decoration: underline; */  
+}

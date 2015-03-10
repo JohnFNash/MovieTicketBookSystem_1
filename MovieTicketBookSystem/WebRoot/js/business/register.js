@@ -1,0 +1,44 @@
+//注册表单验证
+$().ready(function(){		
+	//要验证的表单
+	$("#regForm").validate({
+		//验证的规则
+		rules:{
+			//用户名字段非空，为邮箱
+			username:{
+				required:true,
+			},
+			//密码字段：非空，长度不能小于6个字符
+			password:{
+				required:true,
+				minlength:6
+			},
+			pwdAgain:{
+				required:true,
+				minlength:6
+			},
+			code:{
+				required:true,
+				minlength:4
+			}
+		},
+		//验证提示的信息
+		messages:{
+			username:{
+				required:"请输入用户名",
+			},
+			password:{
+				required:"请输入密码",
+				minlength:$.validator.format("密码不能小于{6}个字符")
+			},
+			pwdAgain:{
+				required:"请输入确认密码",
+				minlength:$.validator.format("密码不能小于{6}个字符")
+			},
+			code:{
+				required:"请输入验证码",
+				minlength:$.validator.format("密码不能小于{4}个字符")
+			}
+		}			
+	});
+});

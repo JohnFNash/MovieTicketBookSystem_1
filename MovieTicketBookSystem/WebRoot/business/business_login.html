@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>商家登陆</title>
+
+<script type="text/javascript" src="../js/business/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/business/jquery.validate.js"></script>
+<script type="text/javascript" src="../js/business/login.js"></script>
+
+<script type="text/javascript">
+	        // 重载验证码  
+	      function reloadVerifyCode(){  
+	       var timenow = new Date().getTime() ;                         
+	        document.getElementById("safeCodeImg").src="CreateCodeServlet?d="+timenow ;  
+	      }  
+
+</script>
+							
+<style type="text/css">
+<!--
+.login{
+	background-image: url(../images/other/z.jpg);
+}
+.STYLE2 {font-size: 18px}
+form input[type='submit'] {width:116px;height:43px; background-image: url(../images/other/j.PNG); cursor:pointer; border：0px;}
+form input[type='button'] {width:116px;height:43px; background-image: url(../images/other/reg.png); cursor:pointer; border：0px;}
+a:link {
+	color: #3333CC;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+	color: #996600;
+}
+a:active {
+	text-decoration: none;
+}
+
+	/* 文本框的显示效果 */
+		input.error1 { border: 1px solid red; }
+		/* 错误信息显示的样式  */
+		label.error1 {
+		  font-weight: bold;
+		  color: #EA5200;
+		}
+		label.success{
+			color: #ffff00;
+		}
+-->
+</style>
+
+	
+</head>
+
+<body>
+<form id="loginForm" method="post" action="loginServlet?op=login" >
+		<div align="center">
+		  <p><img src="../images/other/l.png" />	      </p>
+		  <p><img src="../images/other/cus001.png" width="405" height="44" /> </p>
+		  <table width="1066" style="height:250px;" border="0" class="login">
+			 <tr>
+              <td width="200px;" height="25">&nbsp;</td>
+              <td width="300px;" colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+              <td width="400px" height="35">&nbsp;</td>
+              <td width="80px"><span class="STYLE2"> 账号：</span>
+              </td>
+              <td >
+              	<input name="name" type="text"  style="width:160px; height:26px;" maxlength="15"/>
+              </td>
+            </tr>
+            <tr>
+            	<td width="200" height="35">&nbsp;</td>
+            	<td >
+            		<span class="STYLE2"> 密码：</span>
+            	</td>
+            	<td>
+            		<input name="pwd" type="password"  style="width:160px; height:26px;" maxlength="15"/>
+            	</td>
+            </tr>
+            <tr>
+              <td height="35">&nbsp;</td>
+              <td valign="top" width="2"><span class="STYLE2">验证码： </span></td>
+              <td>
+              		<input type="text" name="code" size="10px;" style="height: 24px;" maxlength="4" />
+              		<img alt="验证码" id="safeCodeImg" src="CreateCodeServlet" width="60" height="20" onclick="javascript:reloadVerifyCode();" />
+    				<a href="javascript:reloadVerifyCode();" style="text-decoration: none;color: black;">看不清</a>
+              </td>
+           </tr>
+           <tr>
+           		<td height="50">&nbsp;</td>
+           		<td colspan="2">
+           			<input type="submit" value="" />
+           			<input type="button" value="" onclick="location.href='business_register.jsp'"/>
+           		</td>
+           </tr>
+           <tr>
+              <td width="150" height="25">&nbsp;</td>
+              <td width="500" colspan="2">&nbsp;</td>
+            </tr>
+          </table>
+		  <p>&nbsp;</p>
+		</div>
+  
+</form>
+</body>
+</html>

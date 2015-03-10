@@ -1,0 +1,166 @@
+@CHARSET "UTF-8";
+/*背景色*/
+body{
+}
+
+/*背景层*/
+.box{
+width:900px;
+min-height:600px;
+margin:auto;
+}
+
+.box h2{
+	
+	margin-top: 30px;
+}
+/*h2*/
+h2{
+width:500px;
+height:25px;;
+text-align: center;
+}
+
+
+
+.head{
+	float: left;
+}
+.logo{
+	float: left;
+	width:150px;
+}
+.logo .c1{
+	margin-top: 5px;
+}
+.logo .img{
+	margin-top: 20px;
+}
+/* .head .logo .logo_text{
+	font-family: "微软雅黑","宋体" ;
+	font-size: 16px;
+	text-align: center;
+} */
+.title{
+	float: left;
+	width:500px;
+	margin-left:50px;
+}
+.box table{
+	float: left;
+	
+}
+.top{
+	margin-top: 10px;
+	float:left;
+}
+
+
+
+/*上层*/
+.top{
+width:900px;
+height:300px;
+margin-top: 30px;
+}
+/*表格*/
+.table{
+width:100%;
+height:180px;
+}
+
+/*图片*/
+.pic{
+}
+/*表格的每一格*/
+.table td{
+	min-height: 35px;
+    line-height: 30px;
+}
+/* 上传图片 */
+.table .m1{
+	float: left;
+}
+.table .m2{
+	
+	float: left;
+}
+/*每个文本框*/
+.input{
+width:500px;
+font-size: 14px;
+min-height: 25px;
+color:#444;
+}
+
+/*上一个文本域*/
+.textarea{
+width:500px;
+line-height: 30px;
+font-size: 14px;
+color:#444;
+}
+
+/*影院介绍标题层*/
+.bottom{
+	float:left;
+	margin-top: 25px;
+}
+.bottom_title{
+	width: 900px;
+	height: 42px;
+	border-bottom: 2px solid #eb6120;
+	margin-bottom: 50px;
+}
+/*影院介绍层*/
+.jieshao{
+	width: 120px;
+	height: 42px;
+	text-align: center;
+	background-color: #eb6120;
+}
+/*影院介绍层里面的span*/
+.jieshao span{
+	color: #FFFFFF;
+	font-family: 微软雅黑;
+	font-size: 16px;
+	font-weight: bold;
+	position: relative;
+	top: 10px;
+	left: 4px;
+}
+/*下一个文本域*/
+.textarea_2{
+width:900px;
+height:200px;
+margin-left:0px;
+line-height: 30px;
+font-size: 14px;
+color:#444;
+}
+
+/*下层*/
+.bottom{
+width:900px;
+height:300px;
+}
+
+/*提交按钮层*/
+.btn{
+	width:900px;
+	height:40px;
+	text-align:left;
+	margin-top:20px;
+}
+
+/*修改按钮*/
+.btn input[type='submit'] {
+	border:none;
+	background-color:#eb6120;
+	color:#fff;
+	padding:10px 20px;
+	font-size:16px;
+	border-radius:4px;
+	cursor:pointer;
+	font-family: 微软雅黑;
+}

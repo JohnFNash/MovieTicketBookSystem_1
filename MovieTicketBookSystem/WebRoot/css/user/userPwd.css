@@ -1,0 +1,28 @@
+@CHARSET "UTF-8";
+
+/*�ײ�*/
+.modifyPwdDiv{
+	width:500px;
+	margin:auto;
+	background-color:#FFFFFF;
+}
+
+.table {
+	margin-top:30px;
+}
+
+/*����td*/
+.table td{
+	min-width:40px;
+	height:25px;
+	padding:5px;
+}
+/*��ͷ*/
+.table caption{
+	font-family:"黑体";
+	font-size:32px;
+	font-weight:normal;
+}
+.error {
+	font-size:13px;
+}

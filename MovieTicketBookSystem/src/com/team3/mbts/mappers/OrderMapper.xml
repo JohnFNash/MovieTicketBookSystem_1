@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">	
+<mapper namespace="com.team3.mbts.mappers.OrderMapper">
+	<resultMap type="com.team3.mbts.entity.Order" id="OrderResult">
+		<id property="id" column="ID" />
+		<!-- <result property="userId" column="USER_ID"/> -->
+		<result property="cinemaId" column="CINEMA_ID"/>
+		<!-- <result property="screenings" column="SCREENINGS"/> -->
+		<result property="time" column="TIME"/>
+		<result property="status" column="STATUS"/>
+		
+		<association property="user" column="USER_ID" select="findUserById" />
+		<association property="screenings" column="SCREENINGS" select="findScreeningById" />
+	</resultMap>
+	
+	<!-- 根据用户编号查找用户信息 -->
+	<select id="findUserById" parameterType="int" resultMap="com.team3.mbts.mappers.UserInfoMapper.SimplifiedUserInfoResult">
+		SELECT USER_ID, ACCOUNT FROM TB_USERINFO WHERE USER_ID=#{id}
+	</select>
+
+	<!-- 根据场次编号查找场次信息 -->
+	<select id="findScreeningById" parameterType="int" resultMap="com.team3.mbts.mappers.ScreeningMapper.MediumScreeningsResult">
+		SELECT ID, MOVIE_ID, VIDEO_HALL_ID,PRICE FROM TB_SCREENINGS WHERE ID=#{id}
+	</select>
+</mapper>

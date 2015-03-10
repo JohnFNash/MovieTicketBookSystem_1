@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">	
+<mapper namespace="com.team3.mbts.mappers.ScreeningMapper">
+	<resultMap type="com.team3.mbts.entity.Screenings" id="ScreeningsResult">
+		<id property="id" column="ID" />
+		<!-- <result property="movieId" column="MOVIE_ID"/>
+		<result property="videoHallId" column="VIDEO_HALL_ID"/> -->
+		<result property="startTime" column="START_TIME"/>
+		<result property="originalPrice" column="ORIGINAL_PRICE"/>
+		<result property="price" column="PRICE"/>
+	</resultMap>
+	
+	<!-- 根据电影场次编号查找影片类型 -->
+	<select id="findMovieByScreeningId" parameterType="int" resultMap="com.team3.mbts.mappers.MovieMapper.ScreeningMovieResult">
+		SELECT MOVIE_ID, NAME, LANGUAGE, IS_3D, DURATION, POST FROM TB_MOVIE where MOVIE_ID=#{ID}
+	</select>
+	
+	<!-- 根据电影场次编号查找影片类型 -->
+	<select id="findSimpleMovieByScreeningId" parameterType="int" resultMap="com.team3.mbts.mappers.MovieMapper.ScreeningMovieResult">
+		SELECT MOVIE_ID, NAME FROM TB_MOVIE where MOVIE_ID=#{ID}
+	</select>	 
+	 	
+	<!-- 根据电影场次编号查找影厅 -->
+	<select id="findVideoHallByScreeningId" parameterType="int" resultMap="com.team3.mbts.mappers.VideoHallMapper.OrderVideoHallResult">
+		SELECT ID, NO, ROW, COL, CINEMA_ID FROM TB_VIDEO_HALL WHERE ID=#{id}
+	</select>
+	
+	<resultMap type="com.team3.mbts.entity.Screenings" id="ComplicateScreeningsResult">
+		<id property="id" column="ID" />		
+		<result property="startTime" column="START_TIME"/>
+		<result property="originalPrice" column="ORIGINAL_PRICE"/>
+		<result property="price" column="PRICE"/>
+		
+		<association property="movie" column="MOVIE_ID" select="findMovieByScreeningId" />
+		<association property="videoHall" column="VIDEO_HALL_ID" select="findVideoHallByScreeningId" />
+	</resultMap>
+	
+	<resultMap type="com.team3.mbts.entity.Screenings" id="MediumScreeningsResult">
+		<id property="id" column="ID" />		
+<!-- 		<result property="startTime" column="START_TIME"/> -->
+		<!-- <result property="originalPrice" column="ORIGINAL_PRICE"/> -->
+		<result property="price" column="PRICE"/>
+		
+		<association property="movie" column="MOVIE_ID" select="findSimpleMovieByScreeningId" />
+		<association property="videoHall" column="VIDEO_HALL_ID" select="findVideoHallByScreeningId" />
+	</resultMap>	
+</mapper>

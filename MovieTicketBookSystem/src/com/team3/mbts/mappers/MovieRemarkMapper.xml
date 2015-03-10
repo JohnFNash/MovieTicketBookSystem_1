@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">	
+<mapper namespace="com.team3.mbts.mappers.MovieRemarkMapper">
+	<!-- 根据电影编号查找影片内容 -->
+	<select id="findSimplifiedMovieById" parameterType="int" resultMap="com.team3.mbts.mappers.MovieMapper.MovieResultSimplified">
+	 	SELECT MOVIE_ID, NAME FROM TB_MOVIE WHERE MOVIE_ID=#{id}
+	</select>
+	
+	<!-- 根据电影编号查找影片内容 -->
+	<select id="findUserById2" parameterType="int" resultMap="com.team3.mbts.mappers.UserInfoMapper.SimplifiedUserInfoResult">
+		SELECT USER_ID, ACCOUNT, HEAD_PATH FROM TB_USERINFO WHERE USER_ID=#{id}
+	</select>
+
+	<resultMap type="com.team3.mbts.entity.MovieRemark" id="MovieRemarkResult">
+		 <id property="id" column="ID" />
+		<result property="title" column="TITLE"/>
+		<result property="content" column="CONTENT"/>
+		<result property="grade" column="GRADE"/>
+		<result property="time" column="TIME"/>
+		<result property="likeCount" column="LIKE_COUNT"/>
+		<result property="isExist" column="IS_EXIST" />
+		<result property="status" column="STATUS" />
+		<association property="movie" column="MOVIE_ID" select="findSimplifiedMovieById" />
+		<association property="user" column="USER_ID" select="findUserById2" /> 
+	</resultMap>
+	
+</mapper>

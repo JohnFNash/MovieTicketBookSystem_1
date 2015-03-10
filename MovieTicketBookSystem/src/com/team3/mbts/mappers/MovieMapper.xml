@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">	
+<mapper namespace="com.team3.mbts.mappers.MovieMapper">
+	
+	<resultMap type="com.team3.mbts.entity.Movie" id="MovieResult">
+		<id property="movieId" column="MOVIE_ID" />		
+		<result property="name" column="NAME"/>
+		<result property="post" column="POST"/>
+		<result property="title" column="TITLE"/>
+		<result property="is3D" column="IS_3D"/>
+		<result property="area" column="AREA"/>
+		<result property="duration" column="DURATION"/>
+		<result property="language" column="LANGUAGE"/>
+		<result property="publish" column="PUBLISH"/>
+		<result property="description" column="DESCRIPTION"/>
+		<result property="likeCount" column="LIKE_COUNT"/>
+		<result property="attentionCount" column="ATTENTION_COUNT"/>		
+				
+		<association property="score" column="MOVIE_ID" select="computeMovieScore" />
+		<association property="buyCount" column="MOVIE_ID" select="computeBuyCount" />		
+		<collection property="movieTypes" column="MOVIE_ID" select="findMovieTypeById" />
+		<collection property="actors" column="MOVIE_ID" select="findActorsByMovieId" />
+		<collection property="directors" column="MOVIE_ID" select="findDirectorsByMovieId" />
+	</resultMap>
+	
+	<!-- 用于评论列表中的影片信息 -->
+	<resultMap type="com.team3.mbts.entity.Movie" id="MovieResultSimplified">
+		<id property="movieId" column="MOVIE_ID" />
+		<result property="name" column="NAME"/>		
+	</resultMap>
+	
+	<!-- 用于场次列表中的影片信息 -->
+	<resultMap type="com.team3.mbts.entity.Movie" id="ScreeningMovieResult">
+		<id property="movieId" column="MOVIE_ID" />
+		<result property="name" column="NAME"/>
+		<result property="language" column="LANGUAGE"/>
+		<result property="is3D" column="IS_3D"/>
+	</resultMap>	
+	
+	<!-- 根据电影编号查找影片内容 -->
+	<select id="findMovieById" parameterType="int" resultMap="MovieResult">
+		SELECT * FROM TB_MOVIE WHERE MOVIE_ID=#{id}
+	</select>
+	
+	<!-- 根据电影编号查找影片类型 -->
+	<select id="findMovieTypeById" parameterType="int" resultMap="com.team3.mbts.mappers.MovieTypeMapper.MovieTypeResult">
+		SELECT TYPE_NAME FROM TB_MOVIE_TYPE WHERE MOVIE_ID=#{id}
+	</select>
+
+	<!-- 根据电影编号在电影_演员表中查找主演 -->	
+	<select id="findActorsByMovieId" parameterType="int" resultMap="com.team3.mbts.mappers.ActorMapper.ActorResult">
+		SELECT * FROM TB_ACTOR AS A, TB_MOVIE_ACTOR AS M_A WHERE A.ACTOR_ID=M_A.ACTOR_ID AND  M_A.MOVIE_ID=#{id}
+	</select>
+	
+	<!-- 根据电影编号在电影_导演表中查找导演 -->	
+	<select id="findDirectorsByMovieId" parameterType="int" resultMap="com.team3.mbts.mappers.DirectorMapper.DirectorResult">
+		SELECT * FROM TB_DIRECTOR AS D, TB_MOVIE_DIRECTOR AS M_D WHERE D.DIRECTOR_ID=M_D.DIRECTOR_ID AND  M_D.MOVIE_ID=#{id}
+	</select>
+
+	
+	<!-- 计算电影得分 -->
+	<select id="computeMovieScore" parameterType="int" resultType="float">	
+		SELECT Avg(GRADE) FROM TB_MOVIE_REMARK WHERE MOVIE_ID=#{id}
+	</select>
+	
+	<!-- 计算电影售票 -->
+	<select id="computeBuyCount" parameterType="int" resultType="int">	
+		SELECT COUNT(*) FROM TB_ORDER as o, TB_SCREENINGS as s WHERE s.MOVIE_ID=#{id} and o.SCREENINGS=s.ID 
+	</select>
+	
+	<!-- 统计热门影片的数目 -->
+	<select id="countHotestMovies" resultType="int">
+		<![CDATA[select count(*) from TB_MOVIE m where exists (select s.MOVIE_ID from TB_SCREENINGS s 
+			where m.MOVIE_ID=s.MOVIE_ID and s.START_TIME >= GETDATE()) and m.PUBLISH <= GETDATE()]]>		
+	</select>
+	
+	<!-- 根据影片类型和搜索关键字等筛选得到的热映影片数目 -->	
+	<select id="selectHotMoviesCountByDynamicParameter" resultType="int">
+		select count(*) from TB_MOVIE as m
+		<choose>
+			<when test="(typeName == '' or typeName == null) and (key == '' or key == null)">
+				where exists (select s.MOVIE_ID from TB_SCREENINGS s where m.MOVIE_ID=s.MOVIE_ID and s.START_TIME >= GETDATE())
+			</when>
+			<when test="(typeName == '' or typeName == null) and (key != '' and key != null)">
+				where exists (select s.MOVIE_ID from TB_SCREENINGS s where m.MOVIE_ID=s.MOVIE_ID and s.START_TIME >= GETDATE()) and NAME like '%${key}%'
+			</when>
+			<when test="(typeName != '' and typeName != null) and (key == '' or key == null)">
+				where m.MOVIE_ID in (select t.MOVIE_ID from TB_MOVIE_TYPE t where TYPE_NAME=#{typeName} and exists (select s.MOVIE_ID from TB_SCREENINGS s where m.MOVIE_ID=s.MOVIE_ID and s.START_Time >= GETDATE()) )
+			</when>
+			<otherwise>
+				where m.MOVIE_ID in (select t.MOVIE_ID from TB_MOVIE_TYPE t where TYPE_NAME=#{typeName} and exists (select s.MOVIE_ID from TB_SCREENINGS s where m.MOVIE_ID=s.MOVIE_ID and s.START_TIME >= GETDATE()) ) and NAME like '%${key}%'
+			</otherwise>
+		</choose>
+	</select>
+			
+	<!-- 根据影片类型和搜索关键字等查询热映影片 -->	
+	<select id="getHotMoviesByDynamicParameter" resultMap="com.team3.mbts.mappers.MovieMapper.MovieResult">
+		select m.MOVIE_ID, NAME, POST, TITLE, LANGUAGE, DURATION, ATTENTION_COUNT, BUY_COUNT from TB_MOVIE as m
+		<choose>
+			<when test="(typeName == '' or typeName == null) and (key == '' or key == null)">
+				where exists (select s.MOVIE_ID from TB_SCREENINGS s where m.MOVIE_ID=s.MOVIE_ID and s.START_TIME >= GETDATE())
+			</when>
+			<when test="(typeName == '' or typeName == null) and (key != '' and key != null)">
+				where exists (select s.MOVIE_ID from TB_SCREENINGS s where m.MOVIE_ID=s.MOVIE_ID and s.START_TIME >= GETDATE()) and NAME like '%${key}%'
+			</when>
+			<when test="(typeName != '' and typeName != null) and (key == '' or key == null)">
+				where m.MOVIE_ID in (select t.MOVIE_ID from TB_MOVIE_TYPE t where TYPE_NAME=#{typeName} and exists (select s.MOVIE_ID from TB_SCREENINGS s where m.MOVIE_ID=s.MOVIE_ID and s.START_Time >= GETDATE()) )
+			</when>
+			<otherwise>
+				where m.MOVIE_ID in (select t.MOVIE_ID from TB_MOVIE_TYPE t where TYPE_NAME=#{typeName} and exists (select s.MOVIE_ID from TB_SCREENINGS s where m.MOVIE_ID=s.MOVIE_ID and s.START_TIME >= GETDATE()) ) and NAME like '%${key}%'
+			</otherwise>
+		</choose>		
+		<choose>
+			<when test="order == '按日期(由近到远)'">order by PUBLISH desc</when>
+			<when test="order == '按评分(由高到低)'">order by PUBLISH desc</when>
+			<when test="order == '按购票(由高到低)'">order by BUY_COUNT desc</when>
+			<when test="order == '按关注(由高到低)'">order by ATTENTION_COUNT desc</when>
+		</choose>
+	</select>		
+								
+	<!-- 根据影片类型和搜索关键字等筛选得到的即将上映的影片的数目 -->	
+	<select id="countFilterMoviesInMovieStore" resultType="int">
+		select count(*) 
+		<choose>
+			<when test="(typeName == '' or typeName == null)">from TB_MOVIE as m</when>
+			<otherwise>from TB_MOVIE m, TB_MOVIE_TYPE as t</otherwise>
+		</choose>
+		<where>
+			<if test="typeName != '' and typeName != null">
+				 m.MOVIE_ID=t.MOVIE_ID and t.TYPE_NAME=#{typeName}
+			</if>
+			<if test="area != '' and area != null">
+				and area=#{area}
+			</if>
+			<if test="startTime != '' and startTime != null">
+				and m.PUBLISH >= #{startTime}
+			</if>
+			<if test="endTime != '' and endTime != null">
+				<![CDATA[and m.PUBLISH <= #{endTime}]]>						
+			</if>
+			<if test="key != '' and key != null">
+				and m.NAME like '%${key}%'
+			</if>
+		</where>
+	</select>
+			
+	<!-- 根据影片类型和搜索关键字等查询热映影片 -->
+	<select id="filterMoviesInMovieStore" resultMap="MovieResult">
+		select m.* 
+		<choose>
+			<when test="(typeName == '' or typeName == null)">from TB_MOVIE as m</when>
+			<otherwise>from TB_MOVIE m, TB_MOVIE_TYPE as t</otherwise>
+		</choose>
+		<where>
+			<if test="typeName != '' and typeName != null">
+				 m.MOVIE_ID=t.MOVIE_ID and t.TYPE_NAME=#{typeName}
+			</if>
+			<if test="area != '' and area != null">
+				and area=#{area}
+			</if>
+			<if test="startTime != '' and startTime != null">
+				and m.PUBLISH >= #{startTime}
+			</if>
+			<if test="endTime != '' and endTime != null">
+				<![CDATA[and m.PUBLISH <= #{endTime}]]>						
+			</if>
+			<if test="key != '' and key != null">
+				and m.NAME like '%${key}%'
+			</if>
+		</where>
+	</select>	
+
+	<!-- 根据影片类型和搜索关键字等统计筛选出得即将上映的影片的数目 -->
+	<select id="countFutureMoviesByDynamicParameter" resultType="int">
+		select count(*) from TB_MOVIE M 		
+		<where>
+			<if test="typeName == '' and key == ''"><!-- 没有按电影名或搜索关键字进行筛选 -->
+				 m.PUBLISH>= GETDATE()
+			</if>
+			<if test="typeName == '' and key != ''"><!-- 按照搜索关键字(电影名)进行筛选 -->
+				m.PUBLISH>= GETDATE() and NAME like '${key}%'
+			</if>
+			<if test="typeName != '' and key == ''"><!-- 按类型名进行筛选 -->
+				m.MOVIE_ID in (select t.MOVIE_ID from TB_MOVIE_TYPE t where TYPE_NAME=#{typeName}) and m.PUBLISH>= GETDATE()
+			</if>
+			<if test="typeName != '' and key != ''">
+				m.MOVIE_ID in (select t.MOVIE_ID from TB_MOVIE_TYPE t where TYPE_NAME=#{typeName}) and m.PUBLISH>= GETDATE() and NAME like '%${key}%'						
+			</if>
+		</where>		
+	</select>
+
+	<!-- 根据影片类型和搜索关键字等查询即将上映的影片 -->
+	<select id="getFutureMoviesByDynamicParameter" resultMap="MovieResult">
+		select m.* from TB_MOVIE M 		
+		<where>
+			<if test="typeName == '' and key == ''"><!-- 没有按电影名或搜索关键字进行筛选 -->
+				 m.PUBLISH>= GETDATE()
+			</if>
+			<if test="typeName == '' and key != ''"><!-- 按照搜索关键字(电影名)进行筛选 -->
+				m.PUBLISH>= GETDATE() and NAME like '${key}%'
+			</if>
+			<if test="typeName != '' and key == ''"><!-- 按类型名进行筛选 -->
+				m.MOVIE_ID in (select t.MOVIE_ID from TB_MOVIE_TYPE t where TYPE_NAME=#{typeName}) and m.PUBLISH>= GETDATE()
+			</if>
+			<if test="typeName != '' and key != ''">
+				m.MOVIE_ID in (select t.MOVIE_ID from TB_MOVIE_TYPE t where TYPE_NAME=#{typeName}) and m.PUBLISH>= GETDATE() and NAME like '%${key}%'						
+			</if>
+		</where>
+		<choose>
+			<when test="order == '按日期(由近到远)'">order by PUBLISH desc</when>
+			<when test="order == '按关注(由高到低)'">order by ATTENTION_COUNT desc</when>
+		</choose>
+	</select>
+</mapper>

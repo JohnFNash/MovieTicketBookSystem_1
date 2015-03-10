@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* CSS Document */
+.leftNavBox {
+	width:150px;
+}
+.ui_quickBuy {
+    background: url(../../images/other/bg_quickBuy.gif) no-repeat scroll 0 0 #fb9;
+    font-family: "微软雅黑","宋体";
+    font-size: 14px;
+    font-weight: bold;
+	display:block;
+    height: 55px;
+    line-height: 55px;
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 150px;
+}
+.ui_quickBuy:hover {
+    background-position: 0 -55px;
+}
+.ui_aside_nav {
+	margin-left: -40px; margin-top:-8px;
+}
+.ui_aside_nav li {
+    border-top: 1px solid #fff;
+    display: block;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    width: 150px;
+}
+.ui_aside_nav li a {
+    background: none repeat scroll 0 0 #fff6ee;
+    color: #333;
+    display: block;
+    font-family: "微软雅黑","宋体";
+    font-size: 16px;
+    line-height: 40px;
+    padding-left: 13px;
+	text-decoration:none;
+}
+.ui_aside_nav li a:hover {
+    background: none repeat scroll 0 0 #fff;
+    text-decoration: none;
+}
+.ui_aside_nav li span {
+	float:right;
+	margin-right:10px;
+	font-size:13px;
+}
+.ui_aside_nav li.select a {
+	border-left:3px solid #ec6120;
+	background: none repeat scroll 0 0 #fff;
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<title>小伟网络管理平台-网站管理平台</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+.STYLE1 {font-size: 12px}
+-->
+</style>
+  <script type="text/javascript">  
+		    function refresh() {  
+		        //IE存在缓存,需要new Date()实现更换路径的作用  
+		        document.getElementById("image").src="CreateCodeServlet?"+new Date();  
+		    }  
+		</script>  
+		
+	<script type="text/javascript" src="../js/user/jquery-1.11.1.js"></script>
+	
+	<script type="text/javascript">
+		var Login = $("input[name='Login']");
+		var Exit = $("input[name='Exit']");
+		$(function() {
+			$("input[name='account']").blur(function() {
+				 var $parent = $(this).parent();//获取父标签(外层的td)
+				 if($(this).val() == '') {//当前文本框内容为空，添加提示信息
+				 	if($parent.find("span").size() == 0) {//尚未添加错误提示信息
+				 		$parent.append("<span style='color:red; font-size:13px;'>用户名不能为空!</span>");
+				 	}				 	
+				 } else {
+				 	if($parent.find("span").size() > 0) {//文本不为空，去掉错误提示信息
+				 		$parent.find("span").remove();
+				 	}	
+				 }
+			});
+		});
+			$(function() {
+			$("input[name='password']").blur(function() {
+				 var $parent = $(this).parent();//获取父标签(外层的td)
+				 if($(this).val() == '') {//当前文本框内容为空，添加提示信息
+				 	if($parent.find("span").size() == 0) {//尚未添加错误提示信息
+				 		$parent.append("<span style='color:red; font-size:13px;'>密码不能为空!</span>");
+				 	}				 	
+				 } else {
+				 	if($parent.find("span").size() > 0) {//文本不为空，去掉错误提示信息
+				 		$parent.find("span").remove();
+				 	}	
+				 }
+			});
+		});
+			$(function() {
+			$("input[name='code']").blur(function() {
+				 var $parent = $(this).parent();//获取父标签(外层的td)
+				 if($(this).val() == '') {//当前文本框内容为空，添加提示信息
+				 	if($parent.find("span").size() == 0) {//尚未添加错误提示信息
+				 		$parent.append("<span style='color:red; font-size:13px;'>验证码不能为空!</span>");
+				 	}				 	
+				 } else {
+				 	if($parent.find("span").size() > 0) {//文本不为空，去掉错误提示信息
+				 		$parent.find("span").remove();
+				 	}	
+				 }
+			});
+		});
+			$("input[type='submit']").click(function(){
+				if(Login.val()==''){
+					Login.trigger("focus");
+					return false;
+				}
+				if(Exit.val()==''){
+					Exit.trigger("focus");
+					return false;
+				}
+					
+				return true;		
+			});
+	</script>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<form class="admin_ad" method="post" action="AdminLoginServlet">
+<table height="100%" width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td background="if">
+
+<table bgcolor="#002779" height="100%" width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td align="center" valign="middle"> <table width="460" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr> 
+          <td><img src="../images/head/login_1.jpg"  height="23" width="190"></td>
+        </tr>
+      </tbody></table>
+      <table width="460" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr> 
+          <td><img src="../images/head/login_2.jpg" height="142" width="460"></td>
+        </tr>
+      </tbody></table>
+      <table width="460" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr> 
+          <td bgcolor="#EEEEEE" height="6"></td>
+        </tr>
+      </tbody></table>
+      <table width="460" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr> 
+          <td align="left" bgcolor="#FFFFFF" height="120" style="padding-left: 48px;"><table class="text01" style="border-collapse: collapse" align="left" width="400" border="0" bordercolor="#111111" cellpadding="0" cellspacing="0">
+             
+                <tbody><tr> 
+                  <td> <img alt="" src="m" height="1" width="97" border="0"></td>
+                  <td> <img alt="" src="" height="1" width="60" border="0"></td>
+                </tr>
+                <tr> 
+                  <td align="right" height="25" width="10%"><span style="font-size: 12px">用户名：</span></td>
+                  <td  width="300px"> 
+                    <input name="account" size="13" style="width:140px; font-size:12px;" tabindex="1" maxlength="15" >
+                   </td>
+                </tr>
+                <tr> 
+                  <td align="right" height="35" width="18%"><span style="font-size: 12px">密&nbsp;&nbsp;码：</span>                  </td>
+                  <td> <span style="FONT-SIZE: 12px"> 
+                    <input name="password" size="13" style="width:140px;" tabindex="1" type="password" maxlength="15">
+                    </span> </td>
+                </tr>
+				 <tr> 
+                  <td align="right" height="42" width="18%"><span style="font-size: 12px">验证码：</span>                  </td>
+                  <td>
+                    <input name="code" size="13" style="width:60px; height:20px;" tabindex="1" type="text" maxlength="4">
+					<img id="image" src="CreateCodeServlet" alt="验证码" onClick="refresh()" style=" width:60x; height:20px;">
+                    <a class="STYLE1" href="javascript:refresh()" title="看不清楚，请点击更换一张图片">换一张 </a></td>
+                </tr>
+                <tr align="center"> 
+                  <td height="42">&nbsp; </td>
+                  <td align="left" height="38"><input name="Login" type="submit" height="16"  width="70" value="登录">&nbsp;&nbsp;
+                    <input name="Exit" type="submit" value="退出"  width="70" height="16"></td>
+                </tr>
+              
+            </tbody></table> </td>
+        </tr>
+      </tbody></table>
+     </td>
+  </tr>
+</tbody></table>
+	<br>
+      <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr>
+          <td align="center">小伟网络管理平台 <font color="#FF6600">1.0 version</font> Powered By HuaFu All Rights Reserved<br>
+            网络版权所有</td>
+        </tr>
+      </tbody></table> </td>
+  </tr>
+</tbody></table>
+</form>
+</body></html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">	
+<mapper namespace="com.team3.mbts.mappers.SellerMapper">
+	<resultMap type="com.team3.mbts.entity.Seller" id="SellerResult">
+		<id property="sellerId" column="SELLER_ID" />
+		<result property="account" column="ACCOUNT"/>
+		<result property="password" column="PASSWORD"/>
+		<result property="cinemaId" column="CINEMA_ID"/>
+		<result property="isExist" column="IS_EXIST"/>
+	</resultMap>
+	
+	<!-- 按照编号或商家用户名对商家进行模糊匹配查询 -->
+	<select id="getsellerSelec" resultMap="SellerResult">
+		<choose>
+			<when test="type == 0">
+				select * from TB_SELLER where IS_EXIST=1 and SELLER_ID like '%${account}%' order by SELLER_ID
+			</when>
+			<when test="type == 1">
+				select * from TB_SELLER where IS_EXIST=1 and ACCOUNT like '%${account}%' order by SELLER_ID
+			</when>			
+		</choose>
+	</select>
+</mapper>

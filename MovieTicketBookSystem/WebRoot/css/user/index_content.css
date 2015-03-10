@@ -1,0 +1,386 @@
+@charset "utf-8";
+/* CSS Document */
+body {background-color:#FEE8DD;}
+a {
+	text-decoration: none;
+}
+.ui_layout {width: 1190px; margin:0 auto; position:relative;}
+.index_right {position:relative; left:165px; top:31px; width:1040px; height:1350px; background-color:#fff;}
+/* 正在热播 */
+.mod_hd h3 {display:inline; margin-right:15px;}
+.mod_hd span {color:#999; font-size:13px;}
+.mod_bd {margin-left:30px; margin-top:20px;}
+.ui_left {width:690px; float:left; height:590px;}
+.topM .ui_left {width:360px; height:202px; float:left;}
+.topM .ui_right {width:270px; float:right;}
+.ui_media, .ui_pic {display:inline;}
+.onShow .ui_text {width:200px; font-size:13px; overflow:hidden; float:right;}
+.onShow .ui_text h2 {margin-top:-3px;}
+.c999 {color:#999;}
+.onShow .ui_text p {overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.onShow .ui_text em {font-style:normal; color:#999;}
+.onShow .ui_text a,.even_center p a {text-decoration:none; font-size:14px; color:#000; font-weight:normal;}
+.onShow .ui_text a:hover {text-decoration:underline;}
+.ui_summary {margin: 5px 0px; color: #666;
+    font: 12px/22px "微软雅黑","宋体";
+}
+.ui_summary span {
+	 background: url(../../images/other/ico_pub.gif)no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background-position: 0 -52px;
+    display: inline-block;
+    height: 13px;
+    margin: 0 0 0 3px;
+    width: 18px;
+}
+.ui_summary span.first {
+    background-position: 0 -36px;
+    margin: 0 3px 0 0;
+}
+.onShow .ui_text sub, .even_center p sub, .hotCinema .mod_bd sub {font-size: 22px; font-style: italic; color: #F60;
+line-height: 24px; vertical-align: middle; margin-left: 10px;}
+.onShow .ui_text sup, .even_center p sup, .hotCinema .mod_bd sup {font-weight: normal; font-size: 16px; font-style: italic; color: #F60; line-height: 20px;  vertical-align: top;
+margin-left: 2px;}
+
+/* 影院及时刻选择 */
+.onShow {
+	position: relative;
+}
+.onShow .mod_hd {
+	margin-top:10px;
+	margin-left:10px;
+}
+.topM .ui_right a{
+	text-decoration:none;
+}
+.onShow .topM {
+	width: 670px;
+	height:200px;
+}
+.onShow .topM .tags {
+    border-bottom: 1px solid #eee;
+    height: 34px;
+    line-height: 34px;
+    position: relative;
+	font-size:13px;	
+}
+.onShow .topM .tags ul {
+    height: 34px;
+    position: absolute;
+    top: 0;
+	left:-40px;
+    z-index: 2;
+}
+.onShow .topM .tags ul li {	
+    float: left;
+	list-style-type:none;
+}
+.onShow .topM .tags ul li a {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #fff #fff -moz-use-text-color;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 1px 0;
+    color: #999;
+    display: inline-block;
+    height: 33px;
+    line-height: 32px;
+    overflow: hidden;
+    padding: 0px; 10px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 90px;
+	position:relative;
+	top:-16px;
+}
+.onShow .topM .tags ul li a:hover {
+    color: #f60;
+    text-decoration: none;
+}
+.onShow .topM .tags ul li a.select {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #fff;
+    border-color: #eee #eee #fff;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    color: #c30;
+}
+.onShow .topM a.more {float:right; cursor:pointer;}
+.onShow .topM a.more:hover {text-decoration:underline;}
+
+.none {display:none;}
+.onShow .topM .listBox a {
+    background: none repeat scroll 0 0 #fed;
+    color: #ec6120;
+    display: inline-block;
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    margin: 0 5px 5px 0;
+    overflow: hidden;
+    text-align: center;
+    width: 50px;
+}
+.onShow .topM .listBox a:hover {
+    background: none repeat scroll 0 0 #ec6120;
+    color: #fff;
+    text-decoration: none;
+}
+.onShow .topM .listBox a.disable, .onShow .topM .list a.disable:hover {
+    background: none repeat scroll 0 0 #eee;
+    color: #bbb;
+}
+.onShow .topM .listBox {
+    height: 100px;
+    width: 275px;
+	margin-top:15px;
+}
+.redBt {
+	text-decoration:none;
+	color:#fff;
+	padding: 6px 12px;
+	border-radius:3px;
+	background-color:#EB6120;
+}
+.redBt:hover {
+	background-color:#FE7600;
+}
+.onShow .topM .tar a {
+	float:right;
+}
+
+/* 正在热映电影列表 */
+.onShow .listM {
+    position: relative;	
+	top:15px;
+	left:-25px;
+	height: 280px;
+	width: 695px;
+}
+.onShow .listM li {
+    display: inline;
+    float: left;
+    height: 280px;
+    margin: 0 8px;
+    overflow: hidden;
+    text-align: center;
+    width: 156px;
+}
+.onShow .listM .even_left, .onShow .listM .even_right {
+    height: 40px;
+    top: 60px;
+    width: 18px;
+    z-index: 3;
+}
+.onShow .listM .even_left {
+	position:absolute;
+    left: 0;
+}
+.onShow .listM .even_right {
+	position:absolute;
+    right: 0;
+}
+.onShow .orientation {
+    background: url(../../images/other/arror.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    cursor: pointer;
+    display: block;
+    height: 40px;
+    overflow: hidden;
+    width: 18px;
+}
+.onShow .even_right .orientation {
+    background-position: -30px 0;
+}
+.onShow .even_center {
+	position:absolute;
+	left:25px;
+	width:665px;
+	overflow:hidden;
+}
+.onShow .even_center ul {
+	width: 2100px;
+	margin-left:-64px;
+}
+.onShow .even_center ul li {
+	font-size: 13px;
+}
+.onShow .even_center ul li a {
+	color:#fff;	
+}
+.onShow .even_center ul li a.c333 {
+	color:#000;
+	font-size:13px;
+}
+.mt5 {
+	margin-top:5px;
+}
+.mt10 {
+	margin-top:10px;
+}
+.onShow .even_left .disable {
+    background-position: 0 -59px;
+}
+.onShow .even_right .disable {
+    background-position: -30px -59px;
+}
+
+/* 精彩影评 */
+.movieRemark {
+	width: 690px;
+	margin-top: 90px;
+}
+.movieRemark h3 {
+	width:100px;
+	height:40px;
+	margin-left:20px;
+}
+.movieRemark ul {
+	padding-top: 0px;
+}
+.movieRemark .ui_media {
+	height:94px;
+	position:relative;
+	left:-30px;
+}
+.movieRemark ul li {
+	list-style-type:none;
+	padding-bottom: 40px;
+}
+.movieRemark  .ui_pic {
+	padding:0 5px;
+	display:inline;
+	width: 80px;
+	height:80px;
+	float: left;
+	font-size:13px;	
+	text-align:center;
+	margin-left:-40px;
+}
+.movieRemark a {
+	color:#333;
+}
+.movieRemark a:hover {
+	text-decoration:underline;
+}
+.movieRemark .ui_text {
+	height:106px;
+	width: 594px;
+	position: relative;
+	left: 86px;
+	padding-left:-30px;
+}
+.movieRemark .ui_text p{
+	width:415px;
+	max-height:60px;
+	font-size:13px;
+	line-height:20px;
+	overflow:hidden; 	
+	float:left;
+	margin-top:-8px;
+	margin-left:-40px;
+	color:#999;
+	text-overflow:ellipsis;
+}
+.movieRemark .ui_text a.ui_readMore {
+	position: absolute;
+	bottom:0px;
+	left:8px;
+	font-size:13px;	
+}
+.movieRemark .ui_text h4 {
+	width:415px;
+	font-size:14px;
+	font-weight:bold;
+	margin-left:30px;
+	position:relative;
+	left:-35px;
+}
+.movieRemark .ui_text .box_movieInfo {
+	color: #666 !important;
+	background: none repeat scroll 0% 0% #FFF9EE;
+    float: right;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    width: 120px;
+	height:65px;
+	vertical-align:middle;
+}
+.movieRemark .ui_text .box_movieInfo p {
+	width: 100px;
+	clear:both;
+	height:20px;
+	margin-left:20px;
+	margin-top:3px;
+}
+.movieRemark .ui_text .box_movieInfo p a {
+	color:#000;
+}
+
+/* 购票流程及热门影院 */
+.ui_right_2 {
+	width:316px;
+	float:right;
+	padding-right:10px;
+	padding-top:10px;
+}
+.hotCinema {
+	margin-top:20px;
+}
+.hotCinema .mod_hd a {
+	text-decoration: none;
+	color:#000;
+	float:right;
+	font-size:13px;
+	marin-right: 5px;
+}
+.hotCinema .mod_hd a:hover {
+	text-decoration:underline;
+}
+.hotCinema ul {
+	list-style-type:none;
+	margin-left:-28px;
+	font-size:13px;
+}
+.hotCinema ul li {
+	margin-left: -35px;
+	height: 35px;
+	line-height:35px;
+	margin-top: 15px;
+	position:relative;
+	padding-bottom: 15px;
+	border-bottom:1px dashed #ccc;
+}
+.hotCinema ul li a.left {
+	color: #000;
+}
+.hotCinema ul li a.left:hover {
+	text-decoration:underline;
+}
+.right {
+	float:right;
+}
+.minBt {
+	padding:0 6px;
+}
+.hotCinema .mod_bd .point {
+	position: absolute;
+	left:180px;
+}
+.hotCinema .mod_bd sub {
+	font-size: 18px;
+}
+.hotCinema .mod_bd sup {
+	font-size: 14px;
+}
+.hotCinema .ui_pic {
+	width: 150px;
+}

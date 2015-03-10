@@ -1,0 +1,10 @@
+/* 文本框的显示效果 */
+input.error1 { border: 1px solid red; }
+/* 错误信息显示的样式  */
+label.error1 {
+  font-weight: bold;
+  color: #EA5200;
+}
+label.success{
+	color: #ffff00;
+}

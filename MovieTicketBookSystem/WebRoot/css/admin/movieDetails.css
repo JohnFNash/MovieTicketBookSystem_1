@@ -1,0 +1,310 @@
+@CHARSET "UTF-8";
+/* 影片详情css  */
+.detail_body .ui_left {
+    width: 850px;
+}
+.detail_body .ui_right {
+    margin-left: 20px;
+    width: 310px;
+}
+.detail_head {
+    background: -moz-linear-gradient(center top , #fff 0px, #eee 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.detail_head .ui_left, .detail_head .ui_right {
+    background: none repeat scroll 0 center rgba(0, 0, 0, 0);
+}
+.detail_head .ui_left {
+    padding: 10px 0 10px 10px;
+    width: 850px;
+}
+/* 标题css  */
+.detail_head_name {
+    border-bottom: 1px solid #666666;
+    min-height: 45px;
+    padding: 0 250px 10px 0;
+    position: relative;
+}
+.detail_head_name h1 {
+    font: 30px/45px "微软雅黑","宋体";
+}
+.detail_head_name h2 {
+    color: #999;
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+}
+.clear .left{
+	float: left;
+	margin-left: 20xp;
+	
+}
+.clear .n10{
+	width:180px;
+	float: left;
+	margin-left: 30px;
+	
+}
+.clear .n10 .n101{
+	
+	width: 70px;
+	height: 28px;
+	float: left;
+	margin-top:30px;
+	text-align:center;
+	background-color: #EB6120;
+	color:white;
+	font: 16px/30px "微软雅黑","宋体";
+	font-weight: bold;
+}
+.clear .n10 .n102{
+	
+	width: 70px;
+	height: 28px;
+	float: left;
+	margin-top:30px;
+	position:relative;
+	left:10px;
+	text-align:center;
+	background-color: #EB6120;
+	color:white;
+	font: 16px/30px "微软雅黑","宋体";
+	font-weight: bold;
+}
+.clear .n10 .n102 a{
+	color: white;
+	cursor:pointer;
+	text-decoration: none;
+}
+.clear .n10 .n101 a{
+	color: white;
+	cursor:pointer;
+	text-decoration: none;
+}
+
+/* 喜欢 关注 购票 css  */
+.movieCountList {
+    height: 50px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+.movieCountList ul li {
+    border-left: 1px solid #4D4D4D;
+    color: #666;
+    padding: 0 10px;
+    width: auto;
+}
+.movieCountList ul li.first {
+    border-left: medium none;
+}
+.movieCountList ul li b {
+    color: #333;
+    font-weight:800;
+    font-size: 16px;
+}
+.movieCountList ul li b, .movieCountList ul li span {
+    display: block;
+    text-align: center;
+}
+.clear:after, .button:after, .ui_layout:after, .abeam:after, .list li:after, .tales60:after, .tales100:after, .selectOptions:after, .inner:after, .nav_tabs:after {
+    clear: both;
+    content: "content";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+    width: 0;
+}
+
+.ui_list li {
+    height: 28px;
+    line-height: 28px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+.ui_list li a {
+    background: url("/css/movie_wide/ico_dot.gif") no-repeat scroll left center rgba(0, 0, 0, 0);
+    color: #333;
+    padding-left: 10px;
+}
+.ui_inline, .ui_inline {
+    list-style: none outside none;
+    margin-left: 0;
+}
+.ui_inline li, .ui_inline li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.detail_head_info {
+    padding: 20px 0;
+}
+.detail_head_info .ui_pic {
+    margin-right: 30px;
+}
+.detail_head_info .ui_text {
+    min-height: 280px;
+}
+
+/* 海报及影片详情css   */
+.ui_media, .ui_text {
+    overflow: hidden;
+}
+.ui_media .ui_text{
+	text-indent: 10px;
+}
+/* .ui_media .ui_pic img, .ui_media .ui_picR img {
+    display: block;
+} */
+.ui_media .ui_pic {
+    float: left;
+    margin-right: 10px;
+}
+ .ui_media .ui_picR {
+    float: right;
+    margin-left: 10px;
+}
+.ui_media .ui_media {
+    color: #666;
+    margin-top: 10px;
+} 
+
+.mt10 {
+    margin-top: 10px;
+}
+.ui_summary {
+    color: #666;
+    font: 12px/22px "微软雅黑","宋体";
+    margin: 5px 0;
+}
+.ui_summary span {
+    background-position: 0 -52px;
+    display: inline-block;
+    height: 13px;
+    margin: 0 0 0 3px;
+    width: 18px;
+}
+.ui_summary span.first {
+    background-position: 0 -36px;
+    margin: 0 3px 0 0;
+}
+.ui_summary_big {
+    color: #666;
+    font: 16px/30px "微软雅黑","宋体";
+}
+.ui_summary_big span {
+    background-position: 0 -19px;
+    display: inline-block;
+    height: 13px;
+    margin: 0 0 0 10px;
+    width: 18px;
+}
+.ui_summary_big span.first {
+    background-position: 0 2px;
+    margin: 0 10px 0 0;
+}
+
+.detail_head_text {
+    line-height: 15px;
+    min-height: 150px;
+    padding-bottom: 10px;
+}
+.detail_head_text p em {
+    color: #777;
+    font-style: normal;
+}
+
+/* 剧情简介  css  */
+.introduction{
+	width:100%;
+	
+	/* border: 1px solid skyblue; */
+}
+.introduction .m10{
+	width:100%;
+	height: 42px;
+	border-bottom:2px solid #EB6120;
+	float: left;
+	
+}
+.introduction .m10 .m11{
+	width: 120px;
+	height: 42px;
+	float: left;
+	background-color:#EB6120;
+	color:white;
+	font-family: "微软雅黑","宋体";
+    font-size: 16px;
+    font-weight: bold;
+}
+.introduction .m10 .m11 span{
+	position: relative;
+	top: 10px;
+	left: 30px;
+}
+
+.m12{
+	width: 95%;
+	/* border: 1px solid purple; */
+	margin-top: 15px;
+	float: left;
+	color: #333;
+  		font-size: 16px;
+  		padding: 0 15px;
+}
+.m12 .m121,.m122{
+	text-indent: 2em;
+}
+
+/* 操作按钮css  */
+.operate{
+	/* border: 1px solid skyblue; */
+	margin-top: 20px;
+	float: left;
+}
+.blue {  
+    color: #d9eef7;  
+    border: solid 1px #0076a3;  
+    background: #0095cd;  
+    background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));  
+    background: -moz-linear-gradient(top,  #00adee,  #0078a5);  
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');  
+} 
+.button {  
+    display: inline-block;  
+    zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */  
+    *display: inline;  
+    vertical-align: baseline;  
+    margin: 0 2px;  
+    outline: none;  
+    cursor: pointer;  
+    text-align: center;  
+    text-decoration: none;  
+    font: 14px/100% Arial, Helvetica, sans-serif;  
+    padding: .5em 2em .55em;  
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);  
+    -webkit-border-radius: .5em;   
+    -moz-border-radius: .5em;  
+    border-radius: .5em;  
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);  
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);  
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);  
+}  
+.button:hover {  
+    text-decoration: none;  
+}  
+.button:active {  
+    position: relative;  
+    top: 1px;  
+}  
+
+a {  
+	    color: #339;  
+	    text-decoration: none;  
+	}  
+a:hover {  
+    text-decoration: underline;  
+} 

@@ -1,0 +1,541 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 全局样式  */
+em {
+	font-style:normal;
+}
+a {
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:underline;
+}
+ul {
+	list-style-type: none;
+}
+.ui_right {
+	width:1050px;
+	float:right;
+	margin-right:-10px;
+	margin-top:-30px;
+	background-color:#FFFFFF;
+}
+.ui_right ul, .ui_right li {
+	margin: 0;
+	padding: 0;
+	word-wrap: break-word;
+}
+body {
+	color: #333;
+	font: 12px/22px verdana,Arial,Helvetica,"宋体",sans-serif;
+	width:100%;
+	background-color: #FEE8DD;
+}
+.ui_right img {
+	border: 0 none;
+}
+.ui_right img {
+	vertical-align: middle;
+}
+/* 中部内容框架样式  */
+#mid{
+	margin:0px auto;
+	width: 1190px;
+	height: 1158px;		
+	margin-top: 60px;
+	/* border: 1px solid skyblue; */
+}
+/* 左边框架样式   */
+#left{
+	width: 690px;
+	min-height: 1158px;
+	/* border: 1px solid red; */
+	float: left;
+}
+/* 右边框架样式   */
+#right{
+	width: 310px;
+	min-height: 1158px;
+	/* border: 1px solid green; */
+	float: right;
+	padding-right:10px;
+}
+/* 左边头部样式   */
+#left_top{
+	width: 690px;
+	height: 40px;
+	padding-left: 20px;
+	padding-top:20px;
+	float: left;
+}
+#left_top2{
+	width: 627px;
+	height: 33px;
+	margin-top: 25px;
+	padding-left: 20px;
+	float: left;
+}
+#left_top3{
+	width: 690px;
+	height: 29px;
+	margin-top: 20px;
+	padding-left: 92px;
+	float: left;
+}
+#left_top3 input[type='text'] {
+	height:25px;
+	width:240px;
+	font-size:15px;
+	padding-left:10px;
+}
+#left_top3 input[type='button'] {
+	border:none;
+	color:#fff;
+	font-size:15px;	
+}
+
+#left_top4{
+width: 660px;
+height: 30px;
+margin-top: 40px;
+padding-left: 20px;
+padding-top:12px;
+background-color:#F4F4F4;
+float: right;
+}
+
+.m11{
+	float: right;
+	padding-right: 5px;
+}
+.m11 em{
+	font-size: 18px;
+}
+#fontstyle{
+	font-size: 14px;
+}
+.simulate_list li {
+float: left;
+ margin: 0 5px;
+}
+.simulate_list li a {
+background: none repeat scroll 0 0 #bbbbbb;
+color: #ffffff;
+display: inline-block;
+height: 22px;
+line-height: 22px;
+padding: 0 7px;
+text-decoration: none;
+}
+.simulate_list li a span {
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	height: 22px;
+	line-height: 22px;
+}
+.simulate_list li a.selected {
+	background: none repeat scroll 0 0 #cc3300;
+}
+.simulate_list li a img {
+	margin-left: 10px;
+	position: relative;
+	top: -1px;
+}
+
+#fontcolor{
+	color: #EB6120;
+}
+.m110{
+	font-size: 14px;
+	color: #999999;
+	
+}
+/* 右边 最受关注影院样式   */
+.m12{
+	width: 310px;
+	height: 40px;
+	text-align: left;
+	padding-top: 30px;
+}
+.m13{
+	width: 310px;
+}
+.m13 ul li{
+	list-style:none;
+}
+
+.m13 ul li .topThree{
+		
+}
+.m13 ul li .num{
+	color: #EB6120;
+	font-size: 14px;
+	padding-left: 8px;
+	font-weight: bold;
+}
+.m13 ul li .num1{
+	color: #999999;
+	font-size: 14px;
+	padding-left: 8px;
+	font-weight: bold;
+}
+.m13 ul li .mName{
+	font-size: 12px;
+	padding-left: 18px;
+}
+.m13 ul li .point{
+	color: #EB6120;
+	font-size: 14px;
+	float: right;
+	margin-right: 10px;
+	
+}
+.m13 ul li .min{
+	font-size: 18px;
+}
+/* 右边正在热映样式   */
+.m14{
+	margin-top:20px;
+	width: 310px;
+	height: 40px;
+}
+.t{
+	float: left;
+}
+.m{
+	font-size:14px;
+	float: right;
+}
+
+.nowm li{
+	list-style: none;
+}
+
+.ui_media, .ui_text {
+	 overflow: hidden;
+}
+.ui_media .ui_pic img, .ui_media .ui_picR img {
+	display: block;
+}
+.ui_media .ui_pic {
+	float: left;
+	margin-right: 10px;
+}
+.ui_media .ui_picR {
+	float: right;
+	margin-left: 10px;
+}
+.ui_media {
+	color: #666;
+	margin-top: 15px;
+}
+.fs14 {
+	font-size: 16px;
+	color: #EB6120;
+}
+.grade {
+	font: 14px/22px verdana,Arial,Helvetica,"宋体",sans-serif;
+	margin: 0 0 0 9px;
+	color: #EB6120;
+}
+.grade sub {
+	color: #ff6600;
+	font-size: 24px;
+	font-style: italic;
+	vertical-align: middle;
+}
+.grade sup {
+	color: #ff6600;
+	font-size: 14px;
+	font-style: italic;
+	line-height: 20px;
+	margin-left: -4px;
+	vertical-align: 3px;
+}
+.mt5 {
+	margin-top: 5px;
+	color: #999999;
+	font-size: 14px;
+}
+.c999 {
+	color: black !important;
+	font-size: 14px;
+}
+.nowm .ui_text {
+	height:128px;
+}
+.nowm .ui_text p {
+	max-width:210px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	height: 25px;
+	font-size:13px;
+	position: relative;
+	top:2px;
+	margin:0;
+	padding:0;
+}
+
+/* 右边一周影片排行样式  */
+.ranklist{
+	margin-top: 30px;
+	width: 310px;
+	height: 40px;
+}
+.fs11{
+	font-size: 12px;
+}
+.ranktitle{
+	margin-top: 2px;
+	width: 310px;
+	height: 40px;
+}
+.rlist{
+	margin-top: 10px;
+	width: 310px;
+}
+.rlist ul li{
+	list-style:none;
+	padding-left:0px;
+	text-align:left;
+}
+
+.topThree {
+	height:50px;
+	border-bottom: 1px dashed #ddd;
+}
+.topThree span {
+	position: relative;
+	top:10px;
+}
+.topThree span.point{
+	float: right;
+	position:relative;
+}
+.topThree span.point sup {
+	font-size:14px;
+	font-style: italic;
+}
+.topThree span.point sub {
+	font-style: italic;
+	font-size:18px;
+}
+.topThree a {
+	color:#999;
+}
+.rlist ul li .num{
+	color: #EB6120;
+	font-size: 14px;
+	padding-left: 8px;
+	font-weight: bold;
+}
+.rlist ul li .num1{
+	color: #999999;
+	font-size: 14px;
+	padding-left: 8px;
+	font-weight: bold;
+}
+.rlist ul li .mName{
+	font-size: 14px;
+	padding-left: 18px;
+}
+.rlist ul li .point{
+	color: #EB6120;
+	font-size: 14px;
+	float: right;
+	margin-right: 50px;
+	font-style:italic;
+	
+}
+.rlist ul li .min{
+	font-size: 18px;
+}
+.rlist ul li em {
+	background: url("file_img/ico_trend.gif") no-repeat scroll 15px -88px rgba(0, 0, 0, 0);
+	width: 40px;
+}
+.rlist ul li em.rise {
+	background-position: 15px -41px;
+}
+.rlist ul li em.drop {
+	background-position: 15px 10px;
+}
+.dotline{
+	border: 1px dashed #999999;
+	width: 308px;
+}
+
+/* 影院列表样式   */
+.cinemalist ul li.effectLi {
+	border-bottom: 1px solid #f4f4f4;
+	display: inline-block;
+	margin-bottom: 20px;
+	padding: 0 0 20px 10px;
+	position: relative;
+	z-index: 1;
+}
+.effectLi .ui_media .ui_pic {
+	margin-right: 20px;
+}
+.mt10 {
+	margin-top: 10px;
+}
+.clear:after, .button:after, .ui_layout:after, .abeam:after, .list li:after, .tales60:after, .tales100:after, .selectOptions:after, .inner:after, .nav_tabs:after {
+	clear: both;
+	content: "content";
+	display: block;
+	font-size: 0;
+	height: 0;
+	visibility: hidden;
+	width: 0;
+}
+.effectLi .ui_text div.left {
+	width: 370px;
+}
+.effectLi .ui_text div.right {
+	width: 150px;
+}
+.effectLi .ui_text div.right p {
+	text-align: center;
+}
+.cinemalist a {
+	color: #333;
+}
+.cinemalist .title h2, .movieList .title h3 {
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 26px;
+	overflow: hidden;
+}
+.cinemalist .title h2 {
+	font: 24px/26px verdana,Arial,"微软雅黑","宋体";
+}
+.ml5 {
+	margin-left: 5px;
+}
+.ffst {
+	font-family: "宋体" !important;
+}
+.mt5 {
+	margin-top: 5px;
+}
+.favorable {
+	color: #666;
+}
+.mt20 {
+	margin-top: 20px !important;
+}
+.mr10 {
+	margin-right: 10px;
+}
+.left {
+	float: left;
+}
+.right{
+	float: right;
+}
+#left_top2 span {
+	font-size:16px;
+	color:#999;
+	width:50px;
+	margin-right:30px;
+}
+.ml20 {
+	margin-left:20px;
+}
+.redBt {
+	text-decoration:none;
+	color:#fff;
+	padding: 6px 12px;
+	border-radius:3px;
+	background-color:#EB6120;
+	cursor:pointer;
+}
+.redBt:hover {
+	background-color:#FE7600;
+	text-decoration: none;
+}
+
+.effectLi .detail_list {
+	background: none repeat scroll 0 0 #fbfbfb;
+	
+}
+.effectLi .detail_list li {
+	clear: both;
+	margin-top:10px;
+	padding-left:5px;
+	padding-bottom:20px;
+	height: 30px;
+}
+.effectLi .detail_list li a {
+	display: block;
+	height: 18px;
+	line-height: 18px;
+	text-decoration: none;
+}
+.effectLi .detail_list li span {
+	color: #333333;
+	display: inline-block;
+	padding-bottom:10px;
+	float: left;
+	height: 18px;
+	line-height: 18px;
+	
+}
+.effectLi .detail_list li .theRoom {
+	cursor: pointer;
+	font-weight: bold;
+	width: 100px;
+}
+.effectLi .detail_list li .theName {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100px;
+}
+.effectLi .detail_list li .theTime {
+	width: 100px;
+}
+.effectLi .detail_list li .theLanguage {
+	width: 130px;
+}
+.effectLi .detail_list li .thePrice {
+	width: 70px;
+}
+.effectLi .detail_list li .theRoom .room {
+	border-bottom: 1px dashed #999;
+	color: #999;
+	cursor: pointer;
+	font-weight: normal;
+	line-height: 18px;
+}
+.button, .button span, .button input {
+	background-color:#F46C00;
+	border-radius: 5px;
+	border: 0 none;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-family: "宋体";
+	text-align: center;
+	text-decoration: none !important;
+	width: auto;
+}
+.minBt {
+	height: 24px;
+	line-height: 24px;
+	overflow: hidden;
+	padding-left: 14px;
+}
+.minBt span, .minBt input {
+	float: left;
+	font-size: 12px;
+	height: 24px;
+	line-height: 24px;
+	overflow: hidden;
+	padding-right: 14px;
+}
+	

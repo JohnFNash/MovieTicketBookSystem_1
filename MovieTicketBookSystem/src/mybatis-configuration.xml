@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<environments default="development">
+		<environment id="development">			
+			<transactionManager type="JDBC"/>			
+				<dataSource type="POOLED">
+					<property name="driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+					<!-- <property name="url" value="jdbc:sqlserver://192.168.0.124:1433;database=MBTSDB"/> -->
+					<property name="url" value="jdbc:sqlserver://localhost:1433;database=MTBSDB"/>
+					<property name="username" value="sa"/>
+					<property name="password" value="xxc123456"/>
+				</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<mapper resource="com/team3/mbts/mappers/ActorMapper.xml" />
+		<mapper resource="com/team3/mbts/mappers/AreaMapper.xml" />
+		<mapper resource="com/team3/mbts/mappers/DirectorMapper.xml" />
+		<mapper resource="com/team3/mbts/mappers/CinemaMapper.xml" />
+		<mapper resource="com/team3/mbts/mappers/CinemaRemarkMapper.xml" />
+		<mapper resource="com/team3/mbts/mappers/MovieMapper.xml" />
+		<mapper resource="com/team3/mbts/mappers/MovieRemarkMapper.xml" />
+		<mapper resource="com/team3/mbts/mappers/MovieTypeMapper.xml" />
+		<mapper resource="com/team3/mbts/mappers/OrderMapper.xml" />
+		<mapper resource="com/team3/mbts/mappers/ScreeningMapper.xml" />
+		<mapper resource="com/team3/mbts/mappers/SeatMapper.xml" />
+		<mapper resource="com/team3/mbts/mappers/SellerMapper.xml" />
+		<mapper resource="com/team3/mbts/mappers/TicketMapper.xml" />
+		<mapper resource="com/team3/mbts/mappers/UserInfoMapper.xml" />
+		<mapper resource="com/team3/mbts/mappers/VideoHallMapper.xml" />
+		<mapper resource="com/team3/mbts/mappers/OrderTicketMapper.xml" />
+		<mapper class="com.team3.mbts.mappers.MovieActorMapper"/>
+		<mapper class="com.team3.mbts.mappers.MovieDirectorMapper"/>
+		<mapper class="com.team3.mbts.mappers.SellerCinemaMapper"/>
+	</mappers>
+</configuration>

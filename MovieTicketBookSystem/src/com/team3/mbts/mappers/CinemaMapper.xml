@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">	
+<mapper namespace="com.team3.mbts.mappers.CinemaMapper">
+	<resultMap type="com.team3.mbts.entity.Cinema" id="CinemaResult">
+		<id property="cinemaId" column="CINEMA_ID" />
+		<result property="cinemaName" column="CINEMA_NAME"/>
+		<!-- <result property="districtName" column="DISTRICT_NAME"/> -->
+		<result property="address" column="ADDRESS"/>
+		<result property="logo" column="LOGO"/>
+		<result property="scene" column="SCENE"/>
+		<result property="tel" column="TEL"/>
+		<result property="special" column="SPECIAL"/>
+		<result property="description" column="DESCRIPTION"/>
+		<result property="visitCount" column="VISIT_COUNT"/>
+		<result property="isOpen" column="IS_OPEN"/>
+		
+		<association property="score" column="CINEMA_ID" select="computeCinemaScore" />
+		<association property="area" column="AREA_ID" select="getArea" />
+	</resultMap>
+	
+	<resultMap type="com.team3.mbts.entity.Cinema" id="SimpliedCinemaResult">
+		<id property="cinemaId" column="CINEMA_ID" />
+		<result property="cinemaName" column="CINEMA_NAME"/>		
+		
+		<association property="score" column="CINEMA_ID" select="computeCinemaScore" />
+	</resultMap>
+	
+	<resultMap type="com.team3.mbts.entity.Cinema" id="SmallestCinemaResult">
+		<id property="cinemaId" column="CINEMA_ID" />
+		<result property="cinemaName" column="CINEMA_NAME"/>
+	</resultMap>
+	
+	<!-- 计算电影得分 -->
+	<select id="computeCinemaScore" parameterType="int" resultType="float">
+		SELECT Avg(GRADE) FROM TB_CINEMA_REMARK WHERE CINEMA_ID=#{id}
+	</select>
+	
+	<!-- 获取电影院所在行政区 -->
+	<select id="getArea" parameterType="int" resultMap="com.team3.mbts.mappers.AreaMapper.AreaResult">
+		SELECT AREA_ID, AREA_NAME, PARENT_ID FROM TB_AREA WHERE AREA_ID=#{id}
+	</select>
+	
+</mapper>
